@@ -29,6 +29,7 @@
 		7A72D2AD204B44900049A4EF /* DrinkDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A72D2AC204B44900049A4EF /* DrinkDatabase.swift */; };
 		7A72D2AF204B44A00049A4EF /* FBDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A72D2AE204B44A00049A4EF /* FBDatabase.swift */; };
 		7A72D2B1204B51470049A4EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A72D2B0204B51470049A4EF /* GoogleService-Info.plist */; };
+		7A72D2B3204B61FC0049A4EF /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A72D2B2204B61FC0049A4EF /* SignIn.storyboard */; };
 		C62614B6FE1671B9F63086CD /* Pods_MixalotUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2C869110E6E2BE70DA9EB1 /* Pods_MixalotUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		7A72D2AC204B44900049A4EF /* DrinkDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDatabase.swift; sourceTree = "<group>"; };
 		7A72D2AE204B44A00049A4EF /* FBDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBDatabase.swift; sourceTree = "<group>"; };
 		7A72D2B0204B51470049A4EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7A72D2B2204B61FC0049A4EF /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		856C20FDF0145BC40B8E68CE /* Pods_Mixalot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mixalot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB5EA79758DEBF9A7880C3D7 /* Pods-MixalotUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MixalotUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MixalotUITests/Pods-MixalotUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C220BDE31A61F8EC7EB44846 /* Pods-Mixalot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mixalot.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mixalot/Pods-Mixalot.release.xcconfig"; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				7A72D29F204B3FEF0049A4EF /* ItemViewer~.storyboard */,
 				7A72D2A0204B3FEF0049A4EF /* DrinkList.storyboard */,
 				7A72D2A1204B3FEF0049A4EF /* Settings.storyboard */,
+				7A72D2B2204B61FC0049A4EF /* SignIn.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				7A72D2A2204B3FEF0049A4EF /* ItemViewer.storyboard in Resources */,
 				7A72D2A4204B3FEF0049A4EF /* Favorites.storyboard in Resources */,
 				34DE8255204B38F800870884 /* Assets.xcassets in Resources */,
+				7A72D2B3204B61FC0049A4EF /* SignIn.storyboard in Resources */,
 				7A72D2A7204B3FEF0049A4EF /* DrinkList.storyboard in Resources */,
 				7A72D2A6204B3FEF0049A4EF /* ItemViewer~.storyboard in Resources */,
 				34DE8250204B38F800870884 /* Main.storyboard in Resources */,
