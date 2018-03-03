@@ -17,7 +17,17 @@
 		34DE8258204B38F800870884 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34DE8256204B38F800870884 /* LaunchScreen.storyboard */; };
 		34DE8263204B38F800870884 /* MixalotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE8262204B38F800870884 /* MixalotTests.swift */; };
 		34DE826E204B38F800870884 /* MixalotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE826D204B38F800870884 /* MixalotUITests.swift */; };
-		7A4F107F204B3E34002456A2 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4F107E204B3E34002456A2 /* Drink.swift */; };
+		7A4F107F204B3E34002456A2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4F107E204B3E34002456A2 /* User.swift */; };
+		7A72D2A2204B3FEF0049A4EF /* ItemViewer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A72D29B204B3FEF0049A4EF /* ItemViewer.storyboard */; };
+		7A72D2A3204B3FEF0049A4EF /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A72D29C204B3FEF0049A4EF /* Search.storyboard */; };
+		7A72D2A4204B3FEF0049A4EF /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A72D29D204B3FEF0049A4EF /* Favorites.storyboard */; };
+		7A72D2A5204B3FEF0049A4EF /* Bar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A72D29E204B3FEF0049A4EF /* Bar.storyboard */; };
+		7A72D2A6204B3FEF0049A4EF /* ItemViewer~.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A72D29F204B3FEF0049A4EF /* ItemViewer~.storyboard */; };
+		7A72D2A7204B3FEF0049A4EF /* DrinkList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A72D2A0204B3FEF0049A4EF /* DrinkList.storyboard */; };
+		7A72D2A8204B3FEF0049A4EF /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A72D2A1204B3FEF0049A4EF /* Settings.storyboard */; };
+		7A72D2AA204B40750049A4EF /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A72D2A9204B40750049A4EF /* Drink.swift */; };
+		7A72D2AD204B44900049A4EF /* DrinkDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A72D2AC204B44900049A4EF /* DrinkDatabase.swift */; };
+		7A72D2AF204B44A00049A4EF /* FBDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A72D2AE204B44A00049A4EF /* FBDatabase.swift */; };
 		C62614B6FE1671B9F63086CD /* Pods_MixalotUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2C869110E6E2BE70DA9EB1 /* Pods_MixalotUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,7 +65,17 @@
 		34DE8269204B38F800870884 /* MixalotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MixalotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DE826D204B38F800870884 /* MixalotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixalotUITests.swift; sourceTree = "<group>"; };
 		34DE826F204B38F800870884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7A4F107E204B3E34002456A2 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		7A4F107E204B3E34002456A2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7A72D29B204B3FEF0049A4EF /* ItemViewer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ItemViewer.storyboard; sourceTree = "<group>"; };
+		7A72D29C204B3FEF0049A4EF /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		7A72D29D204B3FEF0049A4EF /* Favorites.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
+		7A72D29E204B3FEF0049A4EF /* Bar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Bar.storyboard; sourceTree = "<group>"; };
+		7A72D29F204B3FEF0049A4EF /* ItemViewer~.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "ItemViewer~.storyboard"; sourceTree = "<group>"; };
+		7A72D2A0204B3FEF0049A4EF /* DrinkList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DrinkList.storyboard; sourceTree = "<group>"; };
+		7A72D2A1204B3FEF0049A4EF /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		7A72D2A9204B40750049A4EF /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		7A72D2AC204B44900049A4EF /* DrinkDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDatabase.swift; sourceTree = "<group>"; };
+		7A72D2AE204B44A00049A4EF /* FBDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBDatabase.swift; sourceTree = "<group>"; };
 		856C20FDF0145BC40B8E68CE /* Pods_Mixalot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mixalot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB5EA79758DEBF9A7880C3D7 /* Pods-MixalotUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MixalotUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MixalotUITests/Pods-MixalotUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C220BDE31A61F8EC7EB44846 /* Pods-Mixalot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mixalot.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mixalot/Pods-Mixalot.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +138,8 @@
 		34DE8249204B38F800870884 /* Mixalot */ = {
 			isa = PBXGroup;
 			children = (
+				7A72D2AB204B43140049A4EF /* Database */,
+				7A72D29A204B3FEF0049A4EF /* Storyboards */,
 				7A4F107D204B3DD0002456A2 /* Custom Objects */,
 				34DE824A204B38F800870884 /* AppDelegate.swift */,
 				34DE824C204B38F800870884 /* ViewController.swift */,
@@ -151,9 +173,33 @@
 		7A4F107D204B3DD0002456A2 /* Custom Objects */ = {
 			isa = PBXGroup;
 			children = (
-				7A4F107E204B3E34002456A2 /* Drink.swift */,
+				7A4F107E204B3E34002456A2 /* User.swift */,
+				7A72D2A9204B40750049A4EF /* Drink.swift */,
 			);
 			path = "Custom Objects";
+			sourceTree = "<group>";
+		};
+		7A72D29A204B3FEF0049A4EF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7A72D29B204B3FEF0049A4EF /* ItemViewer.storyboard */,
+				7A72D29C204B3FEF0049A4EF /* Search.storyboard */,
+				7A72D29D204B3FEF0049A4EF /* Favorites.storyboard */,
+				7A72D29E204B3FEF0049A4EF /* Bar.storyboard */,
+				7A72D29F204B3FEF0049A4EF /* ItemViewer~.storyboard */,
+				7A72D2A0204B3FEF0049A4EF /* DrinkList.storyboard */,
+				7A72D2A1204B3FEF0049A4EF /* Settings.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		7A72D2AB204B43140049A4EF /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				7A72D2AC204B44900049A4EF /* DrinkDatabase.swift */,
+				7A72D2AE204B44A00049A4EF /* FBDatabase.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 		7F219F89EF3B1151AD464D6E /* Pods */ = {
@@ -295,15 +341,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34DE8283204B3E3300870884 /* DrinkList.storyboard in Resources */,
-				34DE8281204B3DEF00870884 /* Bar.storyboard in Resources */,
-				34DE8287204B3EC000870884 /* ItemViewer.storyboard in Resources */,
 				34DE8258204B38F800870884 /* LaunchScreen.storyboard in Resources */,
-				34DE8285204B3E4C00870884 /* Settings.storyboard in Resources */,
+				7A72D2A2204B3FEF0049A4EF /* ItemViewer.storyboard in Resources */,
+				7A72D2A4204B3FEF0049A4EF /* Favorites.storyboard in Resources */,
 				34DE8255204B38F800870884 /* Assets.xcassets in Resources */,
-				34DE827D204B3DB900870884 /* Search.storyboard in Resources */,
+				7A72D2A7204B3FEF0049A4EF /* DrinkList.storyboard in Resources */,
+				7A72D2A6204B3FEF0049A4EF /* ItemViewer~.storyboard in Resources */,
 				34DE8250204B38F800870884 /* Main.storyboard in Resources */,
-				34DE827F204B3DDA00870884 /* Favorites.storyboard in Resources */,
+				7A72D2A5204B3FEF0049A4EF /* Bar.storyboard in Resources */,
+				7A72D2A3204B3FEF0049A4EF /* Search.storyboard in Resources */,
+				7A72D2A8204B3FEF0049A4EF /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,8 +544,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				34DE824D204B38F800870884 /* ViewController.swift in Sources */,
+				7A72D2AA204B40750049A4EF /* Drink.swift in Sources */,
 				34DE824B204B38F800870884 /* AppDelegate.swift in Sources */,
-				7A4F107F204B3E34002456A2 /* Drink.swift in Sources */,
+				7A72D2AD204B44900049A4EF /* DrinkDatabase.swift in Sources */,
+				7A4F107F204B3E34002456A2 /* User.swift in Sources */,
+				7A72D2AF204B44A00049A4EF /* FBDatabase.swift in Sources */,
 				34DE8253204B38F800870884 /* Mixalot.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
