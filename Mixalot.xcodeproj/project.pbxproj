@@ -17,6 +17,12 @@
 		34DE8258204B38F800870884 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34DE8256204B38F800870884 /* LaunchScreen.storyboard */; };
 		34DE8263204B38F800870884 /* MixalotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE8262204B38F800870884 /* MixalotTests.swift */; };
 		34DE826E204B38F800870884 /* MixalotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE826D204B38F800870884 /* MixalotUITests.swift */; };
+		34DE827D204B3DB900870884 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34DE827C204B3DB900870884 /* Search.storyboard */; };
+		34DE827F204B3DDA00870884 /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34DE827E204B3DDA00870884 /* Favorites.storyboard */; };
+		34DE8281204B3DEF00870884 /* Bar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34DE8280204B3DEF00870884 /* Bar.storyboard */; };
+		34DE8283204B3E3300870884 /* DrinkList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34DE8282204B3E3300870884 /* DrinkList.storyboard */; };
+		34DE8285204B3E4C00870884 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34DE8284204B3E4C00870884 /* Settings.storyboard */; };
+		34DE8287204B3EC000870884 /* ItemViewer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34DE8286204B3EC000870884 /* ItemViewer.storyboard */; };
 		C62614B6FE1671B9F63086CD /* Pods_MixalotUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2C869110E6E2BE70DA9EB1 /* Pods_MixalotUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +60,12 @@
 		34DE8269204B38F800870884 /* MixalotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MixalotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DE826D204B38F800870884 /* MixalotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixalotUITests.swift; sourceTree = "<group>"; };
 		34DE826F204B38F800870884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34DE827C204B3DB900870884 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Search.storyboard; path = ../../../../../../kaleb/Documents/SideProjects/Mixalot/Mixalot/Storyboards/Search.storyboard; sourceTree = "<group>"; };
+		34DE827E204B3DDA00870884 /* Favorites.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Favorites.storyboard; path = ../../../../../../kaleb/Documents/SideProjects/Mixalot/Mixalot/Storyboards/Favorites.storyboard; sourceTree = "<group>"; };
+		34DE8280204B3DEF00870884 /* Bar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Bar.storyboard; path = ../../../../../../kaleb/Documents/SideProjects/Mixalot/Mixalot/Storyboards/Bar.storyboard; sourceTree = "<group>"; };
+		34DE8282204B3E3300870884 /* DrinkList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = DrinkList.storyboard; path = ../../../../../../kaleb/Documents/SideProjects/Mixalot/Mixalot/Storyboards/DrinkList.storyboard; sourceTree = "<group>"; };
+		34DE8284204B3E4C00870884 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Settings.storyboard; path = ../../../../../../kaleb/Documents/SideProjects/Mixalot/Mixalot/Storyboards/Settings.storyboard; sourceTree = "<group>"; };
+		34DE8286204B3EC000870884 /* ItemViewer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ItemViewer.storyboard; path = ../../../../../../kaleb/Documents/SideProjects/Mixalot/Mixalot/Storyboards/ItemViewer.storyboard; sourceTree = "<group>"; };
 		856C20FDF0145BC40B8E68CE /* Pods_Mixalot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mixalot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB5EA79758DEBF9A7880C3D7 /* Pods-MixalotUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MixalotUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MixalotUITests/Pods-MixalotUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C220BDE31A61F8EC7EB44846 /* Pods-Mixalot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mixalot.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mixalot/Pods-Mixalot.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +128,7 @@
 		34DE8249204B38F800870884 /* Mixalot */ = {
 			isa = PBXGroup;
 			children = (
+				34DE827B204B3DA200870884 /* Storyboards */,
 				34DE824A204B38F800870884 /* AppDelegate.swift */,
 				34DE824C204B38F800870884 /* ViewController.swift */,
 				34DE824E204B38F800870884 /* Main.storyboard */,
@@ -143,6 +156,19 @@
 				34DE826F204B38F800870884 /* Info.plist */,
 			);
 			path = MixalotUITests;
+			sourceTree = "<group>";
+		};
+		34DE827B204B3DA200870884 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				34DE8286204B3EC000870884 /* ItemViewer.storyboard */,
+				34DE8284204B3E4C00870884 /* Settings.storyboard */,
+				34DE8282204B3E3300870884 /* DrinkList.storyboard */,
+				34DE8280204B3DEF00870884 /* Bar.storyboard */,
+				34DE827E204B3DDA00870884 /* Favorites.storyboard */,
+				34DE827C204B3DB900870884 /* Search.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		7F219F89EF3B1151AD464D6E /* Pods */ = {
@@ -284,9 +310,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34DE8283204B3E3300870884 /* DrinkList.storyboard in Resources */,
+				34DE8281204B3DEF00870884 /* Bar.storyboard in Resources */,
+				34DE8287204B3EC000870884 /* ItemViewer.storyboard in Resources */,
 				34DE8258204B38F800870884 /* LaunchScreen.storyboard in Resources */,
+				34DE8285204B3E4C00870884 /* Settings.storyboard in Resources */,
 				34DE8255204B38F800870884 /* Assets.xcassets in Resources */,
+				34DE827D204B3DB900870884 /* Search.storyboard in Resources */,
 				34DE8250204B38F800870884 /* Main.storyboard in Resources */,
+				34DE827F204B3DDA00870884 /* Favorites.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
