@@ -132,6 +132,31 @@ strip_invalid_archs() {
   STRIP_BINARY_RETVAL=1
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Hero/Hero.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/IHKeyboardAvoiding/IHKeyboardAvoiding.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/LGButton/LGButton.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Skeleton/Skeleton.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Hero/Hero.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/IHKeyboardAvoiding/IHKeyboardAvoiding.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/LGButton/LGButton.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Skeleton/Skeleton.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework"
+fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait
 fi
