@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1B31B1BBAC7C9ED3903FCA0E /* Pods_MixalotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C843E587C3B2B6883EC0F8A8 /* Pods_MixalotTests.framework */; };
 		30151E76865C4E4B17E47A30 /* Pods_Mixalot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 856C20FDF0145BC40B8E68CE /* Pods_Mixalot.framework */; };
+		34AF022B204B41E200A6B9CD /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34AF022A204B41E200A6B9CD /* ItemCell.xib */; };
 		34DE824B204B38F800870884 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE824A204B38F800870884 /* AppDelegate.swift */; };
 		34DE824D204B38F800870884 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE824C204B38F800870884 /* ViewController.swift */; };
 		34DE8250204B38F800870884 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34DE824E204B38F800870884 /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 /* Begin PBXFileReference section */
 		05E24177BB01071FA74D6A84 /* Pods-MixalotUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MixalotUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MixalotUITests/Pods-MixalotUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0F2C869110E6E2BE70DA9EB1 /* Pods_MixalotUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MixalotUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34AF022A204B41E200A6B9CD /* ItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ItemCell.xib; path = ../../../../../../kaleb/Documents/SideProjects/Mixalot/Mixalot/Storyboards/ItemCell.xib; sourceTree = "<group>"; };
 		34DE8247204B38F800870884 /* Mixalot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mixalot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DE824A204B38F800870884 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34DE824C204B38F800870884 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				34DE8286204B3EC000870884 /* ItemViewer.storyboard */,
 				34DE8284204B3E4C00870884 /* Settings.storyboard */,
 				34DE8282204B3E3300870884 /* DrinkList.storyboard */,
+				34AF022A204B41E200A6B9CD /* ItemCell.xib */,
 				34DE8280204B3DEF00870884 /* Bar.storyboard */,
 				34DE827E204B3DDA00870884 /* Favorites.storyboard */,
 				34DE827C204B3DB900870884 /* Search.storyboard */,
@@ -312,6 +315,7 @@
 			files = (
 				34DE8283204B3E3300870884 /* DrinkList.storyboard in Resources */,
 				34DE8281204B3DEF00870884 /* Bar.storyboard in Resources */,
+				34AF022B204B41E200A6B9CD /* ItemCell.xib in Resources */,
 				34DE8287204B3EC000870884 /* ItemViewer.storyboard in Resources */,
 				34DE8258204B38F800870884 /* LaunchScreen.storyboard in Resources */,
 				34DE8285204B3E4C00870884 /* Settings.storyboard in Resources */,
@@ -400,6 +404,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Mixalot/Pods-Mixalot-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DOFavoriteButton/DOFavoriteButton.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
@@ -413,6 +418,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DOFavoriteButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",

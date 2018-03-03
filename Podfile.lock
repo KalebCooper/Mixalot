@@ -1,4 +1,5 @@
 PODS:
+  - DOFavoriteButton (0.0.4)
   - Firebase/Auth (4.9.0):
     - Firebase/Core
     - FirebaseAuth (= 4.4.3)
@@ -57,6 +58,7 @@ PODS:
   - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
+  - DOFavoriteButton
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
@@ -69,6 +71,7 @@ DEPENDENCIES:
   - SwiftyJSON
 
 SPEC CHECKSUMS:
+  DOFavoriteButton: 866e15af173d2dd5233971a1f657a5f31d2491d5
   Firebase: 632216af3ed7f31e3be34776947fdc7546cfb572
   FirebaseAnalytics: 388b630c15713f5dbf364071f5f3d6077fb52f4e
   FirebaseAuth: aaaf68d5064a6c8fec435758f83a43b8db26ccaa
@@ -87,6 +90,6 @@ SPEC CHECKSUMS:
   SkyFloatingLabelTextField: 703aa1420b697392b1e7dba25571180dde018477
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 6aa75b14b748c5bc3ff70e40e6bc35a0d2116fa6
+PODFILE CHECKSUM: 98ca9d0e0df84f73c847f3c3b17d5f016ed0ecb8
 
 COCOAPODS: 1.4.0
