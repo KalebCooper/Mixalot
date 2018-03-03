@@ -17,6 +17,7 @@
 		34DE8258204B38F800870884 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34DE8256204B38F800870884 /* LaunchScreen.storyboard */; };
 		34DE8263204B38F800870884 /* MixalotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE8262204B38F800870884 /* MixalotTests.swift */; };
 		34DE826E204B38F800870884 /* MixalotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE826D204B38F800870884 /* MixalotUITests.swift */; };
+		7A4F107F204B3E34002456A2 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4F107E204B3E34002456A2 /* Drink.swift */; };
 		C62614B6FE1671B9F63086CD /* Pods_MixalotUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2C869110E6E2BE70DA9EB1 /* Pods_MixalotUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		34DE8269204B38F800870884 /* MixalotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MixalotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DE826D204B38F800870884 /* MixalotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixalotUITests.swift; sourceTree = "<group>"; };
 		34DE826F204B38F800870884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A4F107E204B3E34002456A2 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 		856C20FDF0145BC40B8E68CE /* Pods_Mixalot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mixalot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB5EA79758DEBF9A7880C3D7 /* Pods-MixalotUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MixalotUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MixalotUITests/Pods-MixalotUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C220BDE31A61F8EC7EB44846 /* Pods-Mixalot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mixalot.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mixalot/Pods-Mixalot.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		34DE8249204B38F800870884 /* Mixalot */ = {
 			isa = PBXGroup;
 			children = (
+				7A4F107D204B3DD0002456A2 /* Custom Objects */,
 				34DE824A204B38F800870884 /* AppDelegate.swift */,
 				34DE824C204B38F800870884 /* ViewController.swift */,
 				34DE824E204B38F800870884 /* Main.storyboard */,
@@ -143,6 +146,14 @@
 				34DE826F204B38F800870884 /* Info.plist */,
 			);
 			path = MixalotUITests;
+			sourceTree = "<group>";
+		};
+		7A4F107D204B3DD0002456A2 /* Custom Objects */ = {
+			isa = PBXGroup;
+			children = (
+				7A4F107E204B3E34002456A2 /* Drink.swift */,
+			);
+			path = "Custom Objects";
 			sourceTree = "<group>";
 		};
 		7F219F89EF3B1151AD464D6E /* Pods */ = {
@@ -481,6 +492,7 @@
 			files = (
 				34DE824D204B38F800870884 /* ViewController.swift in Sources */,
 				34DE824B204B38F800870884 /* AppDelegate.swift in Sources */,
+				7A4F107F204B3E34002456A2 /* Drink.swift in Sources */,
 				34DE8253204B38F800870884 /* Mixalot.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
