@@ -7,25 +7,61 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class DrinkDatabase {
     
+    // MARK: - Alcoholic query constants
     private static var ALCHOLIC_DRINK_QUERY = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic"
+    private static var DRINKS_KEY = "drinks"
+    
+    // MARK: - Ingredient query constants
+    private static var INGREDIENT_QUERY = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i="
     
     private init() {
         
     }
     
-    class func getAlcoholicDrinks() {
-        let url = URL(string: DrinkDatabase.ALCHOLIC_DRINK_QUERY)
-        if url != nil {
-            do {
-                let jsonString = try String(contentsOf: url!)
-                print(jsonString)
+    class func getAlcoholicDrinks(with_completion completion: (_ jsonObject: JSON?) -> ()) {
+        if let url = URL(string: DrinkDatabase.ALCHOLIC_DRINK_QUERY) {
+            if let jsonObject = getEncodedJSON(url: url, key: DRINKS_KEY) {
+                completion(jsonObject)
             }
-            catch {
-                print("Could not get json string")
+            else {
+                completion(nil)
             }
         }
+        else {
+            completion(nil)
+        }
+    }
+    
+    class func getDrinks(with_ingredient ingredient: String, with_completion completion: (_ jsonObject: JSON?) -> ()) {
+        if let url = URL(string: (DrinkDatabase.INGREDIENT_QUERY + ingredient)) {
+            if let jsonObject = getEncodedJSON(url: url, key: DRINKS_KEY) {
+                completion(jsonObject)
+            }
+            else {
+                completion(nil)
+            }
+        }
+        else {
+            completion(nil)
+        }
+    }
+    
+    private class func getEncodedJSON(url: URL, key: String) -> JSON? {
+        do {
+            let jsonString = try String(contentsOf: url)
+            if let jsonStringData = jsonString.data(using: .utf8, allowLossyConversion: false) {
+                let json = try JSON(data: jsonStringData)
+                let jsonObject = json[key]
+                return jsonObject
+            }
+        }
+        catch {
+            return nil
+        }
+        return nil
     }
 }
