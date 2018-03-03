@@ -7,6 +7,17 @@ target 'Mixalot' do
 
   # Pods for Mixalot
 
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
+  pod 'Hero'
+  pod 'SkyFloatingLabelTextField'
+  pod 'IHKeyboardAvoiding'
+  pod 'LGButton'
+  pod 'Skeleton'
+  pod 'SwiftyJSON'
+
   target 'MixalotTests' do
     inherit! :search_paths
     # Pods for testing
