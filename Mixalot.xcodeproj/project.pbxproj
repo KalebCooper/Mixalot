@@ -10,6 +10,7 @@
 		1B31B1BBAC7C9ED3903FCA0E /* Pods_MixalotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C843E587C3B2B6883EC0F8A8 /* Pods_MixalotTests.framework */; };
 		30151E76865C4E4B17E47A30 /* Pods_Mixalot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 856C20FDF0145BC40B8E68CE /* Pods_Mixalot.framework */; };
 		34AF022B204B41E200A6B9CD /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34AF022A204B41E200A6B9CD /* ItemCell.xib */; };
+		34AF022D204B4B8E00A6B9CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 34AF022C204B4B8E00A6B9CD /* GoogleService-Info.plist */; };
 		34DE824B204B38F800870884 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE824A204B38F800870884 /* AppDelegate.swift */; };
 		34DE824D204B38F800870884 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE824C204B38F800870884 /* ViewController.swift */; };
 		34DE8250204B38F800870884 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34DE824E204B38F800870884 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 		05E24177BB01071FA74D6A84 /* Pods-MixalotUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MixalotUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MixalotUITests/Pods-MixalotUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0F2C869110E6E2BE70DA9EB1 /* Pods_MixalotUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MixalotUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34AF022A204B41E200A6B9CD /* ItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ItemCell.xib; path = ../../../../../../kaleb/Documents/SideProjects/Mixalot/Mixalot/Storyboards/ItemCell.xib; sourceTree = "<group>"; };
+		34AF022C204B4B8E00A6B9CD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		34DE8247204B38F800870884 /* Mixalot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mixalot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DE824A204B38F800870884 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34DE824C204B38F800870884 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				34DE8254204B38F800870884 /* Assets.xcassets */,
 				34DE8256204B38F800870884 /* LaunchScreen.storyboard */,
 				34DE8259204B38F800870884 /* Info.plist */,
+				34AF022C204B4B8E00A6B9CD /* GoogleService-Info.plist */,
 				34DE8251204B38F800870884 /* Mixalot.xcdatamodeld */,
 			);
 			path = Mixalot;
@@ -322,6 +325,7 @@
 				34DE8255204B38F800870884 /* Assets.xcassets in Resources */,
 				34DE827D204B3DB900870884 /* Search.storyboard in Resources */,
 				34DE8250204B38F800870884 /* Main.storyboard in Resources */,
+				34AF022D204B4B8E00A6B9CD /* GoogleService-Info.plist in Resources */,
 				34DE827F204B3DDA00870884 /* Favorites.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
