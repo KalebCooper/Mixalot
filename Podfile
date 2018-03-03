@@ -17,6 +17,7 @@ target 'Mixalot' do
   pod 'LGButton'
   pod 'Skeleton'
   pod 'SwiftyJSON'
+  pod 'DOFavoriteButton'
 
   target 'MixalotTests' do
     inherit! :search_paths
