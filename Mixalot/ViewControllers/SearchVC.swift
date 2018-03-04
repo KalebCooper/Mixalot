@@ -20,11 +20,14 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
         
         setupSearchBar()
         
-        
 
         
         
         // Do any additional setup after loading the view.
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 
     func setupSearchBar() {
@@ -35,6 +38,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
         searchBar.setSearchImageColor(color: .white)
         searchBar.setTextFieldClearButtonColor(color: .white)
     }
+    
     
     
     

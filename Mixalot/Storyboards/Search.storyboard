@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="665-IZ-mUR">
-                                <rect key="frame" x="0.0" y="100" width="375" height="678"/>
+                                <rect key="frame" x="0.0" y="100" width="375" height="712"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CustomCell" rowHeight="125" id="gh1-mf-BiY" customClass="ItemCell" customModule="Mixalot" customModuleProvider="target">
@@ -30,18 +30,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfV-N9-PTc" customClass="DOFavoriteButton" customModule="DOFavoriteButton">
-                                                    <rect key="frame" x="310" y="38" width="50" height="50"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfV-N9-PTc">
+                                                    <rect key="frame" x="310" y="37.666666666666664" width="50" height="49.999999999999993"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="NWB-1O-nM8"/>
                                                         <constraint firstAttribute="height" constant="50" id="lTG-Nl-bo6"/>
                                                     </constraints>
+                                                    <state key="normal" image="HeartImage"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="imageColorOff">
                                                             <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="imageColorOn">
-                                                            <color key="value" red="0.8912609816" green="0.35455638169999998" blue="0.39968371390000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="value" red="0.97254901959999995" green="0.12549019610000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="image" keyPath="image" value="HeartImage"/>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="duration">
@@ -50,7 +51,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="689" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BUt-Rw-wQJ">
-                                                    <rect key="frame" x="310" y="88" width="50" height="15"/>
+                                                    <rect key="frame" x="309.66666666666669" y="87.666666666666671" width="50" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="1MG-vb-SI1"/>
                                                     </constraints>
@@ -64,6 +65,9 @@
                                                         <constraint firstAttribute="width" constant="100" id="wBS-wI-LbI"/>
                                                         <constraint firstAttribute="height" constant="100" id="z5W-zU-buw"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="imageID"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Margarita" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m09-LB-Sb0">
                                                     <rect key="frame" x="123" y="20" width="119" height="36"/>
@@ -130,10 +134,11 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="favoriteNumberOutlet" destination="BUt-Rw-wQJ" id="qaD-34-ifC"/>
-                                            <outlet property="heartOutlet" destination="kfV-N9-PTc" id="v82-E7-uZL"/>
                                             <outlet property="imageOutlet" destination="oVE-x8-znk" id="S3i-B0-hdL"/>
                                             <outlet property="ingred1Outlet" destination="SDY-td-ULA" id="gDq-8D-y98"/>
                                             <outlet property="ingred2Outlet" destination="2b7-iG-8Br" id="5F7-ob-iPz"/>
+                                            <outlet property="ingred3Outlet" destination="c1Z-gl-Nm0" id="9E2-5Q-8D2"/>
+                                            <outlet property="ingred4Outlet" destination="Zvm-df-bKa" id="1fc-sm-L2N"/>
                                             <outlet property="titleOutlet" destination="m09-LB-Sb0" id="EiO-xr-zOL"/>
                                         </connections>
                                     </tableViewCell>
@@ -145,18 +150,18 @@
                             </tableView>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="H7o-o8-plq">
                                 <rect key="frame" x="0.0" y="44" width="375" height="56"/>
-                                <color key="barTintColor" red="0.85043728351593018" green="0.21816034615039825" blue="0.15920260548591614" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="Lzl-Ai-NWD" id="cnY-Jg-yYx"/>
                                 </connections>
                             </searchBar>
                         </subviews>
-                        <color key="backgroundColor" red="0.85043728351593018" green="0.21816034615039825" blue="0.15920260548591614" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.97254901959999995" green="0.12549019610000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="665-IZ-mUR" secondAttribute="bottom" id="DiF-sh-IhS"/>
                             <constraint firstItem="H7o-o8-plq" firstAttribute="bottom" secondItem="665-IZ-mUR" secondAttribute="top" id="GVd-RV-POB"/>
                             <constraint firstItem="H7o-o8-plq" firstAttribute="top" secondItem="Tdx-Gu-iNb" secondAttribute="top" id="KWh-96-elx"/>
-                            <constraint firstItem="665-IZ-mUR" firstAttribute="bottom" secondItem="Tdx-Gu-iNb" secondAttribute="bottom" id="Swb-um-y6K"/>
                             <constraint firstItem="H7o-o8-plq" firstAttribute="leading" secondItem="zK9-IC-uYP" secondAttribute="leading" id="Vuf-lL-6LC"/>
                             <constraint firstItem="H7o-o8-plq" firstAttribute="leading" secondItem="665-IZ-mUR" secondAttribute="leading" id="awy-wG-nOv"/>
                             <constraint firstAttribute="trailing" secondItem="H7o-o8-plq" secondAttribute="trailing" id="cZG-JU-Hax"/>
