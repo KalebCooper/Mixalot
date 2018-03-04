@@ -14,10 +14,10 @@
         <scene sceneID="kt0-6i-7L2">
             <objects>
                 <tableViewController id="bET-PH-iYL" customClass="CocktailsVC" customModule="Mixalot" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="OaX-e0-NvQ">
+                    <tableView key="view" clipsSubviews="YES" tag="1" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="OaX-e0-NvQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
                             <tableViewSection id="cek-jB-Xyg">
                                 <cells>
@@ -28,7 +28,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="239"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenCocktail1" translatesAutoresizingMaskIntoConstraints="NO" id="L59-FL-sbO">
+                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenCocktail1" translatesAutoresizingMaskIntoConstraints="NO" id="L59-FL-sbO">
                                                     <rect key="frame" x="87.666666666666686" y="19" width="200" height="200"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="200" id="8n3-mv-1iT"/>
@@ -38,14 +38,13 @@
                                                         <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="imageID"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCR-E1-5ZZ">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCR-E1-5ZZ">
                                                     <rect key="frame" x="16" y="11" width="46" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="46" id="Gox-TX-8ko"/>
                                                         <constraint firstAttribute="height" constant="30" id="fAv-ds-aF6"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                    <state key="normal" title="&lt;">
+                                                    <state key="normal" image="ArrowLeft">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                 </button>
@@ -190,20 +189,17 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jtp-wi-wSQ">
-                                                    <rect key="frame" x="16" y="-0.33333333333333215" width="343" height="44.333333333333329"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="44" id="dXJ-4A-wQH"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="16" y="11" width="343" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="jtp-wi-wSQ" firstAttribute="leading" secondItem="tJz-Ug-klz" secondAttribute="leading" constant="16" id="XJS-GR-EmC"/>
-                                                <constraint firstItem="jtp-wi-wSQ" firstAttribute="centerY" secondItem="tJz-Ug-klz" secondAttribute="centerY" id="ZTH-YL-VGV"/>
-                                                <constraint firstItem="jtp-wi-wSQ" firstAttribute="centerX" secondItem="tJz-Ug-klz" secondAttribute="centerX" id="avL-xy-9mC"/>
-                                                <constraint firstAttribute="trailing" secondItem="jtp-wi-wSQ" secondAttribute="trailing" constant="16" id="yBf-o0-y68"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="jtp-wi-wSQ" secondAttribute="bottom" id="MEo-sk-dWz"/>
+                                                <constraint firstItem="jtp-wi-wSQ" firstAttribute="top" secondItem="tJz-Ug-klz" secondAttribute="topMargin" id="NQe-OM-X3F"/>
+                                                <constraint firstItem="jtp-wi-wSQ" firstAttribute="leading" secondItem="tJz-Ug-klz" secondAttribute="leadingMargin" id="Pfu-54-bBN"/>
+                                                <constraint firstItem="jtp-wi-wSQ" firstAttribute="trailing" secondItem="tJz-Ug-klz" secondAttribute="trailingMargin" id="ava-py-ubV"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -216,7 +212,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qfK-xw-T0V">
-                                                    <rect key="frame" x="16" y="0.0" width="343" height="104.33333333333333"/>
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="104.66666666666667"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <string key="text">Rub the rim of the glass with the lime slice to make the salt stick to it. Take care to moisten only the outer rim and sprinkle the salt on it. The salt should present to the lips of the imbiber and never mix into the cocktail. Shake the other ingredients with ice, then carefully pour into the glass.</string>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -254,10 +250,11 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8TI-It-4H0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="236" y="118.96551724137932"/>
+            <point key="canvasLocation" x="234.40000000000001" y="117.48768472906404"/>
         </scene>
     </scenes>
     <resources>
+        <image name="ArrowLeft" width="33" height="33"/>
         <image name="dimHeart" width="100" height="100"/>
         <image name="greenCocktail1" width="512" height="512"/>
     </resources>

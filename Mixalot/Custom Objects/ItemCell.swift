@@ -21,7 +21,7 @@ class ItemCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        let favAmount = randRange(lower: 0, upper: 1000)
+        let favAmount = randRange(lower: 0, upper: 107)
         favoriteNumberOutlet.text = "\(favAmount)"
         let value = randRange(lower: 0, upper: 10)
         
