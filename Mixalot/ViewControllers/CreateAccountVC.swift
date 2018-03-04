@@ -57,7 +57,7 @@ class CreateAccountVC: UITableViewController, UIImagePickerControllerDelegate, U
         if let name = fullNameOutlet.text, let email = emailOutlet.text, let username = usernameOutlet.text, let password = passwordOutlet.text, let verifyPass = verifyPasswordOutlet.text, let image = imageView.image, password == verifyPass {
             // If all fields are filled out
             print("Creating user")
-            FBDatabase.createUserAuth(email: email, password: password, with_completion: {(id, error) in
+            FBDatabase.createAccount(email: email, password: password, with_completion: {(id, error) in
                 if let activeID = id {
                     print("Got id in SignIn VC")
                     let user = User(id: activeID, name: name, email: email, username: username)
