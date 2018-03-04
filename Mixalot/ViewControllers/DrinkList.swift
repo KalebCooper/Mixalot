@@ -7,17 +7,40 @@
 //
 
 import UIKit
+import Firebase
 
 class DrinkListCV: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    // MARK: - Properties
+    private var user: User!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //testSingleDrink()
+        //setup()
+        //getDrinkIDs()
         testAPIFilter()
+        //testSingleQuery()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    private func setup() {
+        let ref = Database.database().reference()
+        guard let id = FBDatabase.getSignedInID() else {
+            return
+        }
+        FBDatabase.getUser(with_id: id, ref: ref, with_completion: {(user) in
+            if let activeUser = user {
+                self.user = activeUser
+            }
+            else {
+                print("Could not get user in DrinkList VC")
+            }
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,40 +60,119 @@ class DrinkListCV: UIViewController, UITableViewDelegate, UITableViewDataSource 
         return 0
     }
     
+    private func loadDrinks() {
+        var previousQueriedDrinkIDs: [String] = []
+        var filteredQueriedDrinkIDs: [String] = []
+        print("Started")
+        for ingredient in user.ingredients {
+            if let jsonObjects = DrinkDatabase.getDrinks(with_ingredient: ingredient ){
+                var currentDrinkIDs: [String] = []
+                for jsonObject in jsonObjects {
+                    if let drinkID = DrinkDatabase.getIDFromDrinkJSON(json: jsonObject) {
+                        //print(drinkID)
+                        currentDrinkIDs.append(drinkID)
+                    }
+                }
+                //print("There are \(currentDrinkIDs.count) new ids")
+                if previousQueriedDrinkIDs.count != 0 {
+                    // There have been previous queries
+                    for currentID in currentDrinkIDs {
+                        if previousQueriedDrinkIDs.contains(currentID) {
+                            // If the currentID was found in the previous query
+                            // Add it to the new list of ids
+                            filteredQueriedDrinkIDs.append(currentID)
+                        }
+                    }
+                    previousQueriedDrinkIDs = filteredQueriedDrinkIDs
+                    filteredQueriedDrinkIDs.removeAll()
+                    //print("There are now \(previousQueriedDrinkIDs.count) filtered ids")
+                }
+                else {
+                    // There have not been any previous queries
+                    previousQueriedDrinkIDs = currentDrinkIDs
+                }
+            }
+            else {
+                // Drink does not include this ingredient
+                previousQueriedDrinkIDs = []
+                break
+            }
+        }
+        for previousID in previousQueriedDrinkIDs {
+            print(previousID)
+        }
+        print("Ended")
+        loadDrinks(drinkIDs: previousQueriedDrinkIDs)
+    }
+    
+    private func loadDrinks(drinkIDs: [String]) {
+        
+    }
+    
+    private func testSingleDrink() {
+        if let drink = DrinkDatabase.getDrink(with_id: "13938") {
+            print(drink.name)
+        }
+        else {
+            print("Did not get drink")
+        }
+    }
+    
     private func testAPIFilter() {
         let ingredients = ["Tequila", "Triple sec"]
         var previousQueriedDrinkIDs: [String] = []
         var filteredQueriedDrinkIDs: [String] = []
         print("Started")
         for ingredient in ingredients {
-            DrinkDatabase.getDrinks(with_ingredient: ingredient, with_completion: {(json) in
-                if let jsonObjects = json {
-                    var currentDrinkIDs: [String] = []
-                    for jsonObject in jsonObjects {
-                        if let drinkID = DrinkDatabase.getIDFromDrinkJSON(json: jsonObject) {
-                            //print(drinkID)
-                            currentDrinkIDs.append(drinkID)
-                        }
-                    }
-                    if previousQueriedDrinkIDs.count != 0 {
-                        // There have been previous queries
-                        for currentID in currentDrinkIDs {
-                            if previousQueriedDrinkIDs.contains(currentID) {
-                                // If the currentID was found in the previous query
-                                // Add it to the new list of ids
-                                filteredQueriedDrinkIDs.append(currentID)
-                            }
-                        }
-                        previousQueriedDrinkIDs = filteredQueriedDrinkIDs
-                        filteredQueriedDrinkIDs.removeAll()
+            if let jsonObjects = DrinkDatabase.getDrinks(with_ingredient: ingredient ){
+                var currentDrinkIDs: [String] = []
+                for jsonObject in jsonObjects {
+                    if let drinkID = DrinkDatabase.getIDFromDrinkJSON(json: jsonObject) {
+                        //print(drinkID)
+                        currentDrinkIDs.append(drinkID)
                     }
                 }
-            })
+                //print("There are \(currentDrinkIDs.count) new ids")
+                if previousQueriedDrinkIDs.count != 0 {
+                    // There have been previous queries
+                    for currentID in currentDrinkIDs {
+                        if previousQueriedDrinkIDs.contains(currentID) {
+                            // If the currentID was found in the previous query
+                            // Add it to the new list of ids
+                            filteredQueriedDrinkIDs.append(currentID)
+                        }
+                    }
+                    previousQueriedDrinkIDs = filteredQueriedDrinkIDs
+                    filteredQueriedDrinkIDs.removeAll()
+                    //print("There are now \(previousQueriedDrinkIDs.count) filtered ids")
+                }
+                else {
+                    // There have not been any previous queries
+                    previousQueriedDrinkIDs = currentDrinkIDs
+                }
+            }
+            else {
+                // Drink does not include this ingredient
+                previousQueriedDrinkIDs = []
+                break
+            }
         }
         for previousID in previousQueriedDrinkIDs {
             print(previousID)
+            if let drink = DrinkDatabase.getDrink(with_id: previousID) {
+                print(drink.name)
+            }
+            else {
+                print("Did not get drink")
+            }
         }
         print("Ended")
+    }
+    
+    private func testSingleQuery() {
+        if let jsonObjects = DrinkDatabase.getDrinks(with_ingredient: "Milk") {
+            print(jsonObjects)
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

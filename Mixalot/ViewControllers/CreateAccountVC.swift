@@ -54,13 +54,13 @@ class CreateAccountVC: UITableViewController, UIImagePickerControllerDelegate, U
     // MARK: - Outlet Actions
     
     @IBAction func addPressed(_ sender: Any) {
-        if let name = fullNameOutlet.text, let email = emailOutlet.text, let username = usernameOutlet.text, let password = passwordOutlet.text, let verifyPass = verifyPasswordOutlet.text, let image = imageView.image, password == verifyPass {
+        if let name = fullNameOutlet.text, let email = emailOutlet.text, let password = passwordOutlet.text, let verifyPass = verifyPasswordOutlet.text, let image = imageView.image, password == verifyPass {
             // If all fields are filled out
             print("Creating user")
             FBDatabase.createAccount(email: email, password: password, with_completion: {(id, error) in
                 if let activeID = id {
                     print("Got id in SignIn VC")
-                    let user = User(id: id!, name: name)
+                    let user = User(id: activeID, name: name)
                     FBDatabase.addUpdateUser(user: user, with_completion: {(error) in
                         if let realError = error {
                             // Error
@@ -70,7 +70,9 @@ class CreateAccountVC: UITableViewController, UIImagePickerControllerDelegate, U
                         else {
                             // No error
                             print("Wrote user to database in SignInVC")
-                            FBDatabase.setAutomaticSignIn(email: email, password: password)
+                            FBDatabase.setAutomaticSignIn(email: email, password: password, id: id!)
+                            let tabVC = UIStoryboard(name: "Main", bundle: nil)
+                            self.present(tabVC.instantiateInitialViewController()!, animated: true, completion: nil)
                         }
                     })
                 }
@@ -125,7 +127,7 @@ class CreateAccountVC: UITableViewController, UIImagePickerControllerDelegate, U
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return 5
     }
     
     

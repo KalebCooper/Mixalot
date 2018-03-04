@@ -14,6 +14,8 @@ class FBDatabase {
     // MARK: - Properties
     private static let EMAIL = "email"
     private static let PASSWORD = "password"
+    private static let ID = "id"
+    
     private static let USERS_NODE = "Users"
     private static let DRINKS_NODE = "Drinks"
     private static let USER_ID = "id"
@@ -60,14 +62,25 @@ class FBDatabase {
         })
     }
     
-    class func setAutomaticSignIn(email: String, password: String) {
+    class func setAutomaticSignIn(email: String, password: String, id: String) {
         UserDefaults.standard.set(email, forKey: EMAIL)
         UserDefaults.standard.set(password, forKey: PASSWORD)
+        UserDefaults.standard.set(id, forKey: ID)
     }
     
     class func removeAutomaticSignIn() {
         UserDefaults.standard.set(nil, forKey: EMAIL)
         UserDefaults.standard.set(nil, forKey: PASSWORD)
+        UserDefaults.standard.set(nil, forKey: ID)
+    }
+    
+    class func getSignedInID() -> String? {
+        if let id = UserDefaults.standard.value(forKey: ID) as? String {
+            return id
+        }
+        else {
+            return nil
+        }
     }
     
     class func signOutActiveUser(with_completion completion: (_ error: Bool) -> ()) {
