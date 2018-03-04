@@ -11,6 +11,8 @@ import UIKit
 class IngredientsVC: UIViewController {
     
     var gradientLayer: CAGradientLayer!
+    var ingredient: String!
+    var image: UIImage!
 
     @IBOutlet weak var imageOutlet: UIImageView!
     @IBOutlet weak var titleOutlet: UILabel!
@@ -22,8 +24,16 @@ class IngredientsVC: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        createGradientLayer()
+        if ingredient != nil {
+            createGradientLayer()
+            setup()
+        }
         // Do any additional setup after loading the view.
+    }
+    
+    private func setup() {
+        titleOutlet.text = ingredient
+        imageOutlet.image = image
     }
 
     func createGradientLayer() {
