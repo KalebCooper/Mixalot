@@ -30,6 +30,11 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="selectedIndex">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="E22-J1-09N" kind="relationship" relationship="viewControllers" id="YrB-oN-th1"/>
                         <segue destination="GB4-8m-NUp" kind="relationship" relationship="viewControllers" id="BRP-Aq-Hpc"/>

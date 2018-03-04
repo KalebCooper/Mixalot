@@ -113,7 +113,7 @@ class DrinkDatabase {
     class func getDrink(with_name name: String) -> Drink? {
         if let url = URL(string: (DrinkDatabase.DRINK_NAME_QUERY + name)) {
             if let jsonObject = getEncodedJSON(url: url, key: DRINKS_KEY) {
-                print(jsonObject)
+                //print(jsonObject)
                 let id = jsonObject[0][DRINKS_ID].string!
                 let name = jsonObject[0][DRINK_NAME].string!
                 let glass = jsonObject[0][DRINK_GLASS].string!

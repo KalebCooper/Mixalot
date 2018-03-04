@@ -32,7 +32,8 @@ class CocktailsVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        createGradientLayer()
+        //createGradientLayer()
+        setupCocktail()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

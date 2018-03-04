@@ -21,6 +21,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.hideKeyboard()
+        tableView.keyboardDismissMode = .interactive
         print("Called")
         setupSearchBar()
         setup()
@@ -51,7 +52,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
         ingredientsDrinks = []
         if let ingredients = DrinkDatabase.getIngredients() {
             for ingredient in ingredients {
-                print(ingredient)
+//                print(ingredient)
                 ingredientsDrinks.append(ingredient)
             }
             self.tableView.reloadData()
@@ -147,7 +148,9 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
             destination.ingredient = infoArray[1] as! String
         }
         else if segueID == "DrinkSegue" {
-            
+            let destination = segue.destination as! CocktailsVC
+            destination.image = infoArray[0] as! UIImage
+            //destination.drink = infoArray[1] as! Drink
         }
     }
     
