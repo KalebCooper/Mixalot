@@ -1,4 +1,12 @@
 //
+//  Drink.swift
+//  Mixalot
+//
+//  Created by Jackson Delametter on 3/4/18.
+//  Copyright © 2018 Kaleb Cooper. All rights reserved.
+//
+
+//
 //  Drinks.swift
 //  Mixalot
 //
@@ -30,3 +38,4 @@ class Drink {
     }
     
 }
+
