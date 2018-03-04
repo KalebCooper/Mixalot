@@ -17,12 +17,9 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboard()
-        
+        print("Called")
         setupSearchBar()
-        
-
-        
-        
+        setup()
         // Do any additional setup after loading the view.
     }
     
@@ -32,15 +29,20 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
 
     func setupSearchBar() {
         searchBar.tintColor = UIColor.white
-        searchBar.placeholder = "Search"
+        searchBar.placeholder = "Search for ingredients or drinks"
         searchBar.setTextColor(color: .white)
         searchBar.setPlaceholderTextColor(color: .white)
         searchBar.setSearchImageColor(color: .white)
         searchBar.setTextFieldClearButtonColor(color: .white)
     }
     
-    
-    
+    private func setup() {
+        if let ingredients = DrinkDatabase.getIngredients() {
+            for ingredient in ingredients {
+                print(ingredient)
+            }
+        }
+    }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -54,7 +56,6 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
         return cell
     }
     
-
     /*
     // MARK: - Navigation
 

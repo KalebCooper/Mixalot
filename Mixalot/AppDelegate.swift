@@ -16,18 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         UIApplication.shared.statusBarStyle = .lightContent
-        /*if let signedInInfo = FBDatabase.getSignedInEmailPassword() {
+        if let signedInInfo = FBDatabase.getSignedInEmailPassword() {
             let email = signedInInfo.email
             let password = signedInInfo.password
-            FBDatabase.signIn(email: email, password: password, with_completion: {(error) in
+            FBDatabase.signIn(email: email, password: password, with_completion: {(id, error) in
                 if let actualError = error {
-                    
+                    print(actualError)
                 }
                 else {
-                    
+                    let mainVC = UIStoryboard(name: "Main", bundle: nil)
+                    self.window?.rootViewController = mainVC.instantiateInitialViewController()
                 }
             })
-        }*/
+        }
         // Override point for customization after application launch.
         return true
     }

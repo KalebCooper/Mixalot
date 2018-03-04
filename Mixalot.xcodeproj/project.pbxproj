@@ -12,9 +12,6 @@
 		3429D603204BAD9700AF3E0E /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3429D600204BAD9700AF3E0E /* SignIn.storyboard */; };
 		3429D604204BAD9700AF3E0E /* CreateAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3429D601204BAD9700AF3E0E /* CreateAccount.storyboard */; };
 		3429D605204BAD9700AF3E0E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3429D602204BAD9700AF3E0E /* Launch Screen.storyboard */; };
-		3436E2BB204BC02B00E79F48 /* ItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3436E2BA204BC02B00E79F48 /* ItemVC.swift */; };
-		346E57CF204BB4C4002F755E /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346E57CE204BB4C4002F755E /* ItemCell.swift */; };
-		346E57D1204BBDA4002F755E /* Item.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 346E57D0204BBDA4002F755E /* Item.storyboard */; };
 		34DE824B204B38F800870884 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE824A204B38F800870884 /* AppDelegate.swift */; };
 		34DE824D204B38F800870884 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE824C204B38F800870884 /* ViewController.swift */; };
 		34DE8250204B38F800870884 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34DE824E204B38F800870884 /* Main.storyboard */; };
@@ -23,8 +20,6 @@
 		34DE8258204B38F800870884 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34DE8256204B38F800870884 /* LaunchScreen.storyboard */; };
 		34DE8263204B38F800870884 /* MixalotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE8262204B38F800870884 /* MixalotTests.swift */; };
 		34DE826E204B38F800870884 /* MixalotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE826D204B38F800870884 /* MixalotUITests.swift */; };
-		34DE8BD6204BC441009064D6 /* ImageSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE8BD5204BC441009064D6 /* ImageSelector.swift */; };
-		34DE8BD8204BD369009064D6 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE8BD7204BD369009064D6 /* SettingsVC.swift */; };
 		7A4F107F204B3E34002456A2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4F107E204B3E34002456A2 /* User.swift */; };
 		7A72D2A2204B3FEF0049A4EF /* ItemViewer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A72D29B204B3FEF0049A4EF /* ItemViewer.storyboard */; };
 		7A72D2A3204B3FEF0049A4EF /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A72D29C204B3FEF0049A4EF /* Search.storyboard */; };
@@ -41,6 +36,11 @@
 		7ADB6037204BAC6500F1D2C0 /* SignInTransitionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADB6033204BAC6500F1D2C0 /* SignInTransitionVC.swift */; };
 		7ADB6038204BAC6500F1D2C0 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADB6034204BAC6500F1D2C0 /* SignInVC.swift */; };
 		7ADB6039204BAC6500F1D2C0 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADB6035204BAC6500F1D2C0 /* TabBarController.swift */; };
+		7ADB603B204BD69600F1D2C0 /* ImageSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADB603A204BD69600F1D2C0 /* ImageSelector.swift */; };
+		7ADB603E204BD6D000F1D2C0 /* ItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADB603C204BD6CF00F1D2C0 /* ItemVC.swift */; };
+		7ADB603F204BD6D000F1D2C0 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADB603D204BD6CF00F1D2C0 /* SettingsVC.swift */; };
+		7ADB6042204BD6E800F1D2C0 /* Item.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ADB6040204BD6E800F1D2C0 /* Item.storyboard */; };
+		7ADB6045204BD70300F1D2C0 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADB6044204BD70300F1D2C0 /* ItemCell.swift */; };
 		7AF4686E204B784D00A3A474 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF4686D204B784D00A3A474 /* Extensions.swift */; };
 		7AF46870204B972100A3A474 /* DrinkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF4686F204B972100A3A474 /* DrinkList.swift */; };
 		C62614B6FE1671B9F63086CD /* Pods_MixalotUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2C869110E6E2BE70DA9EB1 /* Pods_MixalotUITests.framework */; };
@@ -69,9 +69,6 @@
 		3429D600204BAD9700AF3E0E /* SignIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		3429D601204BAD9700AF3E0E /* CreateAccount.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateAccount.storyboard; sourceTree = "<group>"; };
 		3429D602204BAD9700AF3E0E /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		3436E2BA204BC02B00E79F48 /* ItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemVC.swift; path = ../../../../../../kaleb/Documents/SideProjects/Mixalot/Mixalot/ViewControllers/ItemVC.swift; sourceTree = "<group>"; };
-		346E57CE204BB4C4002F755E /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemCell.swift; path = "../../../../../../kaleb/Documents/SideProjects/Mixalot/Mixalot/Custom Objects/ItemCell.swift"; sourceTree = "<group>"; };
-		346E57D0204BBDA4002F755E /* Item.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Item.storyboard; path = ../../../../../../kaleb/Documents/SideProjects/Mixalot/Mixalot/Storyboards/Item.storyboard; sourceTree = "<group>"; };
 		34DE8247204B38F800870884 /* Mixalot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mixalot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DE824A204B38F800870884 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34DE824C204B38F800870884 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,8 +83,6 @@
 		34DE8269204B38F800870884 /* MixalotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MixalotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DE826D204B38F800870884 /* MixalotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixalotUITests.swift; sourceTree = "<group>"; };
 		34DE826F204B38F800870884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		34DE8BD5204BC441009064D6 /* ImageSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageSelector.swift; path = ../../../../../../kaleb/Documents/SideProjects/Mixalot/Mixalot/Extensions/ImageSelector.swift; sourceTree = "<group>"; };
-		34DE8BD7204BD369009064D6 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsVC.swift; path = ../../../../../../kaleb/Documents/SideProjects/Mixalot/Mixalot/ViewControllers/SettingsVC.swift; sourceTree = "<group>"; };
 		7A4F107E204B3E34002456A2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7A72D29B204B3FEF0049A4EF /* ItemViewer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ItemViewer.storyboard; sourceTree = "<group>"; };
 		7A72D29C204B3FEF0049A4EF /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
@@ -104,6 +99,11 @@
 		7ADB6033204BAC6500F1D2C0 /* SignInTransitionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInTransitionVC.swift; sourceTree = "<group>"; };
 		7ADB6034204BAC6500F1D2C0 /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		7ADB6035204BAC6500F1D2C0 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		7ADB603A204BD69600F1D2C0 /* ImageSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSelector.swift; sourceTree = "<group>"; };
+		7ADB603C204BD6CF00F1D2C0 /* ItemVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemVC.swift; sourceTree = "<group>"; };
+		7ADB603D204BD6CF00F1D2C0 /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		7ADB6040204BD6E800F1D2C0 /* Item.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Item.storyboard; sourceTree = "<group>"; };
+		7ADB6044204BD70300F1D2C0 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		7AF4686D204B784D00A3A474 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7AF4686F204B972100A3A474 /* DrinkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkList.swift; sourceTree = "<group>"; };
 		856C20FDF0145BC40B8E68CE /* Pods_Mixalot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mixalot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,8 +146,8 @@
 		3429D5F1204B759B00AF3E0E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				7ADB603A204BD69600F1D2C0 /* ImageSelector.swift */,
 				7AF4686D204B784D00A3A474 /* Extensions.swift */,
-				34DE8BD5204BC441009064D6 /* ImageSelector.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -215,14 +215,14 @@
 		34F40600204B5839003189A9 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7ADB603C204BD6CF00F1D2C0 /* ItemVC.swift */,
+				7ADB603D204BD6CF00F1D2C0 /* SettingsVC.swift */,
 				7ADB6032204BAC6500F1D2C0 /* CreateAccountVC.swift */,
 				7ADB6033204BAC6500F1D2C0 /* SignInTransitionVC.swift */,
 				7ADB6034204BAC6500F1D2C0 /* SignInVC.swift */,
 				7ADB6035204BAC6500F1D2C0 /* TabBarController.swift */,
 				7AD06024204B641900B34CF9 /* SearchVC.swift */,
 				7AF4686F204B972100A3A474 /* DrinkList.swift */,
-				3436E2BA204BC02B00E79F48 /* ItemVC.swift */,
-				34DE8BD7204BD369009064D6 /* SettingsVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -230,9 +230,9 @@
 		7A4F107D204B3DD0002456A2 /* Custom Objects */ = {
 			isa = PBXGroup;
 			children = (
+				7ADB6044204BD70300F1D2C0 /* ItemCell.swift */,
 				7A4F107E204B3E34002456A2 /* User.swift */,
 				7A72D2A9204B40750049A4EF /* Drink.swift */,
-				346E57CE204BB4C4002F755E /* ItemCell.swift */,
 			);
 			path = "Custom Objects";
 			sourceTree = "<group>";
@@ -240,6 +240,7 @@
 		7A72D29A204B3FEF0049A4EF /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				7ADB6040204BD6E800F1D2C0 /* Item.storyboard */,
 				3429D601204BAD9700AF3E0E /* CreateAccount.storyboard */,
 				3429D602204BAD9700AF3E0E /* Launch Screen.storyboard */,
 				3429D600204BAD9700AF3E0E /* SignIn.storyboard */,
@@ -249,7 +250,6 @@
 				7A72D29E204B3FEF0049A4EF /* Bar.storyboard */,
 				7A72D2A0204B3FEF0049A4EF /* DrinkList.storyboard */,
 				7A72D2A1204B3FEF0049A4EF /* Settings.storyboard */,
-				346E57D0204BBDA4002F755E /* Item.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -411,10 +411,10 @@
 				34DE8250204B38F800870884 /* Main.storyboard in Resources */,
 				3429D603204BAD9700AF3E0E /* SignIn.storyboard in Resources */,
 				7A72D2A5204B3FEF0049A4EF /* Bar.storyboard in Resources */,
-				346E57D1204BBDA4002F755E /* Item.storyboard in Resources */,
 				3429D604204BAD9700AF3E0E /* CreateAccount.storyboard in Resources */,
 				7A72D2B1204B51470049A4EF /* GoogleService-Info.plist in Resources */,
 				7A72D2A3204B3FEF0049A4EF /* Search.storyboard in Resources */,
+				7ADB6042204BD6E800F1D2C0 /* Item.storyboard in Resources */,
 				7A72D2A8204B3FEF0049A4EF /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -614,22 +614,22 @@
 			files = (
 				34DE824D204B38F800870884 /* ViewController.swift in Sources */,
 				7A72D2AA204B40750049A4EF /* Drink.swift in Sources */,
+				7ADB6045204BD70300F1D2C0 /* ItemCell.swift in Sources */,
 				7ADB6036204BAC6500F1D2C0 /* CreateAccountVC.swift in Sources */,
 				7ADB6039204BAC6500F1D2C0 /* TabBarController.swift in Sources */,
+				7ADB603B204BD69600F1D2C0 /* ImageSelector.swift in Sources */,
 				34DE824B204B38F800870884 /* AppDelegate.swift in Sources */,
 				7ADB6038204BAC6500F1D2C0 /* SignInVC.swift in Sources */,
 				7ADB6037204BAC6500F1D2C0 /* SignInTransitionVC.swift in Sources */,
 				7A72D2AD204B44900049A4EF /* DrinkDatabase.swift in Sources */,
+				7ADB603F204BD6D000F1D2C0 /* SettingsVC.swift in Sources */,
 				7AF4686E204B784D00A3A474 /* Extensions.swift in Sources */,
-				34DE8BD6204BC441009064D6 /* ImageSelector.swift in Sources */,
+				7ADB603E204BD6D000F1D2C0 /* ItemVC.swift in Sources */,
 				7AD06025204B641900B34CF9 /* SearchVC.swift in Sources */,
 				7A4F107F204B3E34002456A2 /* User.swift in Sources */,
 				7A72D2AF204B44A00049A4EF /* FBDatabase.swift in Sources */,
 				7AF46870204B972100A3A474 /* DrinkList.swift in Sources */,
 				34DE8253204B38F800870884 /* Mixalot.xcdatamodeld in Sources */,
-				346E57CF204BB4C4002F755E /* ItemCell.swift in Sources */,
-				3436E2BB204BC02B00E79F48 /* ItemVC.swift in Sources */,
-				34DE8BD8204BD369009064D6 /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -797,7 +797,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VPT5835T5T;
+				DEVELOPMENT_TEAM = CZ7R6F7L6H;
 				INFOPLIST_FILE = Mixalot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Kaleb-Cooper-Team-Red.Mixalot";
@@ -813,7 +813,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VPT5835T5T;
+				DEVELOPMENT_TEAM = CZ7R6F7L6H;
 				INFOPLIST_FILE = Mixalot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Kaleb-Cooper-Team-Red.Mixalot";

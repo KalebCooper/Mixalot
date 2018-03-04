@@ -18,6 +18,7 @@ class DrinkDatabase {
     
     // MARK: - Ingredient query constants
     private static var INGREDIENT_QUERY = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i="
+    private static var ALL_INGREDIENT_QUERY = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
     
     // MARK: - Drink query constants
     private static var DRINK_QUERY = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i="
@@ -64,6 +65,25 @@ class DrinkDatabase {
         if let url = URL(string: (DrinkDatabase.INGREDIENT_QUERY + finalIngredient)) {
             if let jsonObject = getEncodedJSON(url: url, key: DRINKS_KEY) {
                 return jsonObject
+            }
+            else {
+                return nil
+            }
+        }
+        else {
+            return nil
+        }
+    }
+    
+    class func getIngredients() -> [String]? {
+        var ingredients: [String] = []
+        if let url = URL(string: (DrinkDatabase.ALL_INGREDIENT_QUERY)) {
+            if let jsonObject = getEncodedJSON(url: url, key: DRINKS_KEY) {
+                for ingredient in jsonObject {
+                    let jsonIndg = ingredient.1
+                    ingredients.append(jsonIndg[DRINK_INGREDIENT_1].string!)
+                }
+                return ingredients
             }
             else {
                 return nil
