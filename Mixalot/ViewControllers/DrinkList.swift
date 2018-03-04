@@ -1,5 +1,5 @@
 //
-//  CreateAccountVC.swift
+//  BarListCV.swift
 //  Mixalot
 //
 //  Created by Jackson Delametter on 3/3/18.
@@ -7,13 +7,12 @@
 //
 
 import UIKit
-import Firebase
 
-class CreateAccountVC: UITableViewController {
-
+class DrinkListCV: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        testAPIFilter()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -28,42 +27,55 @@ class CreateAccountVC: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 0
     }
     
-    private func testCreateAccount() {
-        FBDatabase.createAccount(email: "user4@gmail.com", password: "password", with_completion: {(id, error) in
-            if let actualError = error {
-                print(actualError)
-            }
-            else {
-                let user = User(id: id!, name: "user2")
-                FBDatabase.addUpdateUser(user: user, with_completion: {(error) in
-                    if let actualError = error {
-                        print(actualError)
+    private func testAPIFilter() {
+        let ingredients = ["Tequila", "Triple sec"]
+        var previousQueriedDrinkIDs: [String] = []
+        var filteredQueriedDrinkIDs: [String] = []
+        print("Started")
+        for ingredient in ingredients {
+            DrinkDatabase.getDrinks(with_ingredient: ingredient, with_completion: {(json) in
+                if let jsonObjects = json {
+                    var currentDrinkIDs: [String] = []
+                    for jsonObject in jsonObjects {
+                        if let drinkID = DrinkDatabase.getIDFromDrinkJSON(json: jsonObject) {
+                            //print(drinkID)
+                            currentDrinkIDs.append(drinkID)
+                        }
                     }
-                    else {
-                        print("Wrote user")
-                        let ref = Database.database().reference()
-                        FBDatabase.getUser(with_id: id!, ref: ref, with_completion: {(user) in
-                            if let activeUser = user {
-                                print("Got activeUser")
+                    if previousQueriedDrinkIDs.count != 0 {
+                        // There have been previous queries
+                        for currentID in currentDrinkIDs {
+                            if previousQueriedDrinkIDs.contains(currentID) {
+                                // If the currentID was found in the previous query
+                                // Add it to the new list of ids
+                                filteredQueriedDrinkIDs.append(currentID)
                             }
-                            else {
-                                print("Did not get user")
-                            }
-                        })
+                        }
+                        previousQueriedDrinkIDs = filteredQueriedDrinkIDs
+                        filteredQueriedDrinkIDs.removeAll()
                     }
-                })
-            }
-        })
+                }
+            })
+        }
+        for previousID in previousQueriedDrinkIDs {
+            print(previousID)
+        }
+        print("Ended")
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! ItemCell
+        return cell
     }
 
     /*

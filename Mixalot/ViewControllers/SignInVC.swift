@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SignInVC: UIViewController {
     
@@ -18,23 +19,35 @@ class SignInVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        FBDatabase.signIn(email: "user@gmail.com", password: "password", with_completion: {(error) in
+        // Do any additional setup after loading the view.
+    }
+    
+    private func testSignIn() {
+        FBDatabase.signIn(email: "user4@gmail.com", password: "password", with_completion: {(id, error) in
             if let actualError = error {
                 print(actualError)
             }
             else {
                 print("Signed in User")
-                FBDatabase.signOutActiveUser(with_completion: {(error) in
-                    if !error {
-                        print("Sign out succsesful")
+                let ref = Database.database().reference()
+                FBDatabase.getUser(with_id: id!, ref: ref, with_completion: {(user) in
+                    if let activeUser = user {
+                        print("Got activeUser")
+                        FBDatabase.signOutActiveUser(with_completion: {(error) in
+                            if !error {
+                                print("Sign out succsesful")
+                            }
+                            else {
+                                print("Did not sign out")
+                            }
+                        })
                     }
                     else {
-                        print("Did not sign out")
+                        print("Did not get user")
                     }
                 })
             }
         })
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

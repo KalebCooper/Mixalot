@@ -14,6 +14,20 @@ class FBDatabase {
     // MARK: - Properties
     private static let EMAIL = "email"
     private static let PASSWORD = "password"
+    private static let USERS_NODE = "Users"
+    private static let DRINKS_NODE = "Drinks"
+    private static let USER_ID = "id"
+    private static let USER_NAME = "name"
+    private static let USER_FAVORITES = "favorites"
+    private static let USER_CREATED_DRINKS = "created drinks"
+    private static let USER_INGREDIENTS = "ingredients"
+    
+    private static let DRINK_ID = "id"
+    private static let DRINK_NAME = "name"
+    private static let DRINK_GLASS = "glass"
+    private static let DRINK_INSTRUCTION = "instruction"
+    private static let DRINK_PICTURE_ID = "picture id"
+    private static let DRINK_DATE_MODIFIED = "date modified"
     
     private init() {
         
@@ -33,16 +47,16 @@ class FBDatabase {
         })
     }
     
-    class func signIn(email: String, password: String, with_completion completion: @escaping (_ error: String?) -> ()){
+    class func signIn(email: String, password: String, with_completion completion: @escaping (_ id: String?, _ error: String?) -> ()){
         Auth.auth().signIn(withEmail: email, password: password, completion: {(userData, error) in
             if let actualError = error {
                 // Error
                 setEmailPassword(email: email, password: password)
-                completion(actualError.localizedDescription)
+                completion(nil, actualError.localizedDescription)
             }
             else {
                 // No Error
-                completion(nil)
+                completion(userData?.uid, nil)
             }
         })
     }
@@ -72,9 +86,69 @@ class FBDatabase {
         }
     }
     
-    class func addUser(user: User, ref: DatabaseReference ,with_completion completion: (_ error: Bool) -> ()) {
+    class func getUser(with_id id: String, ref: DatabaseReference ,with_completion completion: @escaping (_ user: User?) -> ()) {
         ref.observe(.value, with: {(snapshot) in
-            
+            if let root = snapshot.value as? NSDictionary {
+                if let usersNode = root[USERS_NODE] as? NSDictionary {
+                    if let user = usersNode[id] as? [String : Any] {
+                        let id = user[USER_ID] as! String
+                        let name = user[USER_NAME] as! String
+                        var favorites: [String] = []
+                        var createdDrinks: [String] = []
+                        var ingredients: [String] = []
+                        if let optFavorites = user[USER_FAVORITES] as? [String] {
+                            favorites = optFavorites
+                        }
+                        if let optCreatedDrinks = user[USER_CREATED_DRINKS] as? [String] {
+                            createdDrinks = optCreatedDrinks
+                        }
+                        if let optIngredients = user[USER_INGREDIENTS] as? [String] {
+                            ingredients = optIngredients
+                        }
+                        let userObject = User(id: id, name: name, favorites: favorites, createdDrinks: createdDrinks, ingredients: ingredients)
+                        completion(userObject)
+                        
+                    }
+                    else {
+                        completion(nil)
+                    }
+                }
+                else {
+                    completion(nil)
+                }
+            }
+            else {
+                completion(nil)
+            }
         })
     }
+    
+    class func addUpdateUser(user: User, with_completion completion: @escaping (_ error: String?) -> ()) {
+        let ref = Database.database().reference()
+        let json = [USER_ID : user.id, USER_NAME : user.name, USER_FAVORITES : user.favorites, USER_CREATED_DRINKS : user.createdDrinks, USER_INGREDIENTS : user.ingredients] as [String : Any]
+        ref.child(USERS_NODE).child(user.id).setValue(json, withCompletionBlock: {(error, ref) in
+            if let actualError = error {
+                // Error
+                completion(actualError.localizedDescription)
+            }
+            else {
+                completion(nil)
+            }
+        })
+    }
+    
+    class func addUpdateDrink(drink: Drink, with_completion completion: @escaping (_ error: String?) -> ()) {
+        let ref = Database.database().reference()
+        let json = [DRINK_ID : drink.id, DRINK_NAME : drink.name, DRINK_GLASS : drink.glass, DRINK_INSTRUCTION : drink.instruction, DRINK_PICTURE_ID : drink.pictureID, DRINK_DATE_MODIFIED : drink.dateModified] as [String : Any]
+        ref.child(DRINKS_NODE).child(drink.id).setValue(json, withCompletionBlock: {(error, ref) in
+            if let actualError = error {
+                // Error
+                completion(actualError.localizedDescription)
+            }
+            else {
+                completion(nil)
+            }
+        })
+    }
+    
 }
