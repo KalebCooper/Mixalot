@@ -159,9 +159,6 @@ class DrinkListVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     }
     
     private func testAPIFilter() {
-        while self.user != nil {
-            
-        }
         let ingredients = ["Tequila", "Triple sec", "Lime juice"]
         var previousQueriedDrinkIDs: [String] = []
         var filteredQueriedDrinkIDs: [String] = []

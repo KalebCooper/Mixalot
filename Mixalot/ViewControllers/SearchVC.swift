@@ -41,10 +41,14 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     }
     
     private func setup() {
-        ingredientsDrinks = []
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.allowsSelection = true
+        getIngredients()
+    }
+    
+    private func getIngredients() {
+        ingredientsDrinks = []
         if let ingredients = DrinkDatabase.getIngredients() {
             for ingredient in ingredients {
                 print(ingredient)
@@ -66,6 +70,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
         if let ingredient = ingredientOrDrink as? String {
             cell.titleOutlet.text = ingredient
             cell.imageOutlet.image = ImageSelector.pickIngredientImage(title: ingredient)
+            cell.favoriteNumberOutlet.isHidden = true
         }
         else if let drink = ingredientOrDrink as? Drink {
             cell.titleOutlet.text = drink.name
@@ -106,9 +111,28 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
         
     }
     
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        search(text: searchBar.text!)
+    }
     
-
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        search(text: searchBar.text!)
+    }
     
+    private func search(text: String) {
+        if text == "" {
+            getIngredients()
+            tableView.reloadData()
+        }
+        else if let drink = DrinkDatabase.getDrink(with_name: text) {
+            DispatchQueue.main.async {
+                self.ingredientsDrinks.removeAll()
+                self.ingredientsDrinks.append(drink)
+                self.tableView.reloadData()
+            }
+        }
+        
+    }
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
