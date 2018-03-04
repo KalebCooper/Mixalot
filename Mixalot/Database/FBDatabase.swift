@@ -51,7 +51,6 @@ class FBDatabase {
         Auth.auth().signIn(withEmail: email, password: password, completion: {(userData, error) in
             if let actualError = error {
                 // Error
-                setEmailPassword(email: email, password: password)
                 completion(nil, actualError.localizedDescription)
             }
             else {
@@ -61,20 +60,24 @@ class FBDatabase {
         })
     }
     
+    class func setAutomaticSignIn(email: String, password: String) {
+        UserDefaults.standard.set(email, forKey: EMAIL)
+        UserDefaults.standard.set(password, forKey: PASSWORD)
+    }
+    
+    class func removeAutomaticSignIn() {
+        UserDefaults.standard.set(nil, forKey: EMAIL)
+        UserDefaults.standard.set(nil, forKey: PASSWORD)
+    }
+    
     class func signOutActiveUser(with_completion completion: (_ error: Bool) -> ()) {
         do {
             try Auth.auth().signOut()
-            setEmailPassword(email: nil, password: nil)
             completion(false)
         }
         catch {
             completion(true)
         }
-    }
-    
-    private class func setEmailPassword(email: String?, password: String?) {
-        UserDefaults.standard.set(email, forKey: EMAIL)
-        UserDefaults.standard.set(password, forKey: PASSWORD)
     }
     
     class func getSignedInEmailPassword() -> (email : String, password : String)? {

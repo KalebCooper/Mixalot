@@ -86,14 +86,7 @@ class SignInVC: UIViewController, UITextFieldDelegate {
     @IBAction func loginInPressed(_ sender: Any) {
         if let emailUsername = emailUsernameOutlet.text, let password = passwordOutlet.text {
             // If fields are filled out
-            if emailUsername.contains("@") {
-                // User has entered an email
-                loginWithEmail(email: emailUsername, password: password)
-            }
-            else {
-                // User has entered a username
-                loginWithUsername(username: emailUsername, password: password)
-            }
+            loginWithEmail(email: emailUsername, password: password)
         }
         else {
             // Not all fields are filled out
@@ -102,30 +95,13 @@ class SignInVC: UIViewController, UITextFieldDelegate {
     }
     
     /*
-     Used when user enters username
-    */
-    private func loginWithUsername(username: String, password: String) {
-        let ref = Database.database().reference()
-        FBDatabase.getUsername(with_ref: ref, with_username: username, with_completion: {(username, error) in
-            if let usernameObj = username {
-                print("Got username in Sign In VC")
-                let email = usernameObj.email
-                self.loginWithEmail(email: email, password: password)
-            }
-            else {
-                print("Didn ot get username in Sign In VC")
-            }
-        })
-    }
-    
-    /*
      Used when user enters email
     */
     private func loginWithEmail(email: String, password: String) {
-        FBDatabase.signInUser(email: email, password: password, with_completion: {(id, error) in
+        FBDatabase.signIn(email: email, password: password, with_completion: {(id, error) in
             if let activeID = id {
                 print("Got user id in sign in VC")
-                FBDatabase.setAutomaticSignIn(with_email: email, with_password: password, with_id: activeID)
+                FBDatabase.setAutomaticSignIn(email: email, password: password)
                 self.performSegue(withIdentifier: "PageViewSegue", sender: nil)
             }
             else {
