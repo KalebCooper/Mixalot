@@ -189,6 +189,15 @@ class ImageSelector {
     }
     
     
+    class func pickIngredientImage(title: String) -> UIImage{
+        
+        
+        
+        
+        let defaultImage = UIImage(named: "genericIngredient")
+        return defaultImage
+        
+    }
     
     
     
