@@ -60,7 +60,7 @@ class CreateAccountVC: UITableViewController, UIImagePickerControllerDelegate, U
             FBDatabase.createAccount(email: email, password: password, with_completion: {(id, error) in
                 if let activeID = id {
                     print("Got id in SignIn VC")
-                    let user = User(id: activeID, name: name, email: email, username: username)
+                    let user = User(id: id!, name: name)
                     FBDatabase.addUpdateUser(user: user, with_completion: {(error) in
                         if let realError = error {
                             // Error
@@ -70,35 +70,7 @@ class CreateAccountVC: UITableViewController, UIImagePickerControllerDelegate, U
                         else {
                             // No error
                             print("Wrote user to database in SignInVC")
-                            FBDatabase.setAutomaticSignIn(with_email: email, with_password: password, with_id: activeID)
-                            let usernameObj = Username(username: username, email: email)
-                            FBDatabase.addUpdateUsername(with_username: usernameObj, with_completion:{(error) in
-                                if let actualError = error {
-                                    // Error occured
-                                    print("Did not write Username to database")
-                                    print(actualError)
-                                }
-                                else {
-                                    // No error
-                                    print("Wrote Username in database")
-                                    
-                                    FBDatabase.addProfilePicture(with_image: image, for_user: user, with_completion: {(error) in
-                                        if let actualError = error {
-                                            // An error occured
-                                            print("Did not write profile picture in database")
-                                            print(actualError)
-                                        }
-                                        else {
-                                            // No error occured
-                                            print("Added profile picture to database")
-                                            self.performSegue(withIdentifier: "PageViewSegue", sender: nil)
-                                        }
-                                    })
-                                    
-                                    
-                                }
-                            })
-                            
+                            FBDatabase.setAutomaticSignIn(email: email, password: password)
                         }
                     })
                 }
