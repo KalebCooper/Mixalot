@@ -18,13 +18,16 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
         super.viewDidLoad()
         self.hideKeyboard()
         
-        createGradientLayer()
         setupSearchBar()
         
 
         
         
         // Do any additional setup after loading the view.
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 
     func setupSearchBar() {
@@ -36,19 +39,6 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
         searchBar.setTextFieldClearButtonColor(color: .white)
     }
     
-    
-    func createGradientLayer() {
-        gradientLayer = CAGradientLayer()
-        
-        gradientLayer.frame = self.view.bounds
-        
-        let bottomColor = UIColor(displayP3Red: 255/255, green: 47/255, blue: 0/255, alpha: 1).cgColor
-        let topColor = UIColor(displayP3Red: 255/255, green: 136/255, blue: 74/255, alpha: 1).cgColor
-        
-        gradientLayer.colors = [topColor, bottomColor]
-        
-        self.view.layer.insertSublayer(gradientLayer, at: 0)
-    }
     
     
     
