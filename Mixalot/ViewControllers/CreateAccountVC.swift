@@ -168,8 +168,8 @@ class CreateAccountVC: UITableViewController, UIImagePickerControllerDelegate, U
         
         gradientLayer.frame = self.view.bounds
         
-        let bottomColor = UIColor(displayP3Red: 99/255, green: 207/255, blue: 155/255, alpha: 1).cgColor
-        let topColor = UIColor(displayP3Red: 9/255, green: 85/255, blue: 95/255, alpha: 1).cgColor
+        let bottomColor = UIColor(displayP3Red: 255/255, green: 47/255, blue: 0/255, alpha: 1).cgColor
+        let topColor = UIColor(displayP3Red: 255/255, green: 136/255, blue: 74/255, alpha: 1).cgColor
         
         gradientLayer.colors = [topColor, bottomColor]
         
