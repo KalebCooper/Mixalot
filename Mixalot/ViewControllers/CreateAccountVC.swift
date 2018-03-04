@@ -154,7 +154,7 @@ class CreateAccountVC: UITableViewController, UIImagePickerControllerDelegate, U
     }
     
     func setupNavigationController() {
-        let logo = #imageLiteral(resourceName: "Logo Text Wide")
+        let logo = #imageLiteral(resourceName: "AppIconAlpha")
         let imageView = UIImageView(image:logo)
         imageView.hero.id = "logoID"
         let duration: TimeInterval = TimeInterval(exactly: 0.5)!

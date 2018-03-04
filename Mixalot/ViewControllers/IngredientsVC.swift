@@ -1,31 +1,31 @@
 //
-//  ItemVC.swift
+//  IngredientsVC.swift
 //  Mixalot
 //
-//  Created by Kaleb Cooper on 3/3/18.
+//  Created by Kaleb Cooper on 3/4/18.
 //  Copyright © 2018 Kaleb Cooper. All rights reserved.
 //
 
 import UIKit
 
-class ItemVC: UIViewController {
+class IngredientsVC: UIViewController {
     
     var gradientLayer: CAGradientLayer!
 
+    @IBOutlet weak var imageOutlet: UIImageView!
+    @IBOutlet weak var titleOutlet: UILabel!
+    
+    @IBAction func addAction(_ sender: Any) {
+        
+        
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("Test")
-
         createGradientLayer()
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     func createGradientLayer() {
         gradientLayer = CAGradientLayer()
         

@@ -29,7 +29,7 @@ class SettingsVC: UIViewController {
         
         let testarray = ["blue", "blueberry", "orange", "lemon", "strawberry", "lime", "cherry", "red"]
         
-        imageOutlet.image = ImageSelector.selectedImage(ingredients: testarray)
+        imageOutlet.image = ImageSelector.pickCocktailImage(title: "Margarita", ingredients: testarray)
         
     }
     

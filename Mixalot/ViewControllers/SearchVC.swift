@@ -14,11 +14,39 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     
     @IBOutlet weak var searchBar: UISearchBar!
     
+    
+//    var timer = Timer()
+//    var i = 0
+//    func scheduledTimerWithTimeInterval(){
+//        // Scheduling timer to Call the function "updateCounting" with the interval of 1 seconds
+//        timer = Timer.scheduledTimer(timeInterval: 0.08, target: self, selector: #selector(self.animatedReload), userInfo: nil, repeats: true)
+//    }
+//    @objc func animatedReload() {
+//
+//        if i < 1 {
+//
+//            let path = IndexPath(row: i, section: 0)
+//            self.tableView.reloadRows(at: [path], with: .left)
+//            i = i + 1
+//            print("Reordering")
+//        }
+//        else{
+//            timer.invalidate()
+//            i = 0
+//            print("Done")
+//        }
+//
+//
+//    }
+//
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboard()
         
         setupSearchBar()
+        
+//        scheduledTimerWithTimeInterval()
+//        timer.fire()
         
 
         
@@ -51,8 +79,24 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
         //
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! ItemCell
         
+        
+        
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        cell.layer.transform = CATransform3DMakeScale(0.1,0.1,1)
+        UIView.animate(withDuration: 0.4, animations: {
+            cell.layer.transform = CATransform3DMakeScale(1.05,1.05,1)
+        },completion: { finished in
+            UIView.animate(withDuration: 0.4, animations: {
+                cell.layer.transform = CATransform3DMakeScale(1,1,1)
+            })
+        })
+        
+    }
+    
     
 
     /*

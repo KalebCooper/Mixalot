@@ -14,8 +14,57 @@ import UIKit
 class ImageSelector {
     
     
+    class func pickCocktailImage(title: String = "", ingredients: [String]) -> UIImage{
+        
+        if title.lowercased().contains("champagne") || ingredients.contains("champagne") {
+            let imageName = "clearCocktail3"
+            return UIImage(named: imageName)!
+        }
+        if title.lowercased().contains("bloody") || title.contains("mary") {
+            let imageName = "darkCocktail3"
+            return UIImage(named: imageName)!
+        }
+        if title.lowercased().contains("margarita"){
+            let imageName = "greenCocktail3"
+            return UIImage(named: imageName)!
+        }
+        if title.lowercased().contains("martini"){
+            let imageName = "clearCocktail4"
+            return UIImage(named: imageName)!
+        }
+        if title.lowercased().contains("screw"){
+            let imageName = "orangeCocktail2"
+            return UIImage(named: imageName)!
+        }
+        if title.lowercased().contains("sunrise") || ingredients.contains("champagne") {
+            let imageName = "orangeCocktail6"
+            return UIImage(named: imageName)!
+        }
+        if title.lowercased().contains("champagne") || ingredients.contains("champagne") {
+            let imageName = "clearCocktail3"
+            return UIImage(named: imageName)!
+        }
+        if title.lowercased().contains("punch"){
+            let imageName = "redCocktail15"
+            return UIImage(named: imageName)!
+        }
+        if title.lowercased().contains("wine") || ingredients.contains("wine") {
+            let imageName = "redCocktail16"
+            return UIImage(named: imageName)!
+        }
+        if title.lowercased().contains("champagne") || ingredients.contains("champagne") {
+            let imageName = "clearCocktail3"
+            return UIImage(named: imageName)!
+        }
+        
+        
+        return randomCocktailImage(ingredients: ingredients)
+        
+        
+    }
     
-    class func selectedImage(ingredients : [String]) -> UIImage {
+    
+    class func randomCocktailImage(ingredients : [String]) -> UIImage {
         
         let blueFilterKeywords: [String] = ["blue", "blueberry", "curacao", "grape"]
         let clearFilterKeywords: [String] = ["clear", "cream"]
