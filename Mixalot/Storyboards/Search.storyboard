@@ -58,7 +58,7 @@
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="038-cocktails-2" translatesAutoresizingMaskIntoConstraints="NO" id="oVE-x8-znk">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenCocktail1" translatesAutoresizingMaskIntoConstraints="NO" id="oVE-x8-znk">
                                                     <rect key="frame" x="15" y="12" width="100" height="100"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="wBS-wI-LbI"/>
@@ -145,13 +145,14 @@
                             </tableView>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="H7o-o8-plq">
                                 <rect key="frame" x="0.0" y="44" width="375" height="56"/>
+                                <color key="barTintColor" red="0.85043728351593018" green="0.21816034615039825" blue="0.15920260548591614" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="Lzl-Ai-NWD" id="cnY-Jg-yYx"/>
                                 </connections>
                             </searchBar>
                         </subviews>
-                        <color key="backgroundColor" red="0.78738981490000004" green="0.2464441359" blue="0.27221894260000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.85043728351593018" green="0.21816034615039825" blue="0.15920260548591614" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="H7o-o8-plq" firstAttribute="bottom" secondItem="665-IZ-mUR" secondAttribute="top" id="GVd-RV-POB"/>
                             <constraint firstItem="H7o-o8-plq" firstAttribute="top" secondItem="Tdx-Gu-iNb" secondAttribute="top" id="KWh-96-elx"/>
@@ -183,8 +184,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="038-cocktails-2" width="170" height="170"/>
         <image name="HeartImage" width="33" height="33"/>
         <image name="SearchIcon" width="33" height="33"/>
+        <image name="greenCocktail1" width="512" height="512"/>
     </resources>
 </document>
