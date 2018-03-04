@@ -18,6 +18,7 @@ target 'Mixalot' do
   pod 'Skeleton'
   pod 'SwiftyJSON'
   pod 'DOFavoriteButton'
+  pod "SwipeableTabBarController"
 
   target 'MixalotTests' do
     inherit! :search_paths

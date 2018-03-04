@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Bar-->
+        <!--View Controller-->
         <scene sceneID="HEh-VH-hqo">
             <objects>
                 <viewController id="zaC-IO-GYd" sceneMemberID="viewController">
@@ -43,11 +43,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Z80-r1-A5V"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Bar" id="oDC-kg-Pep"/>
+                    <tabBarItem key="tabBarItem" title="" image="BarIcon" id="oDC-kg-Pep"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ms-l4-NWQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="111.2" y="-466.41679160419795"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BarIcon" width="50" height="50"/>
+    </resources>
 </document>

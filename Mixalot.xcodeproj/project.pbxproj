@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1B31B1BBAC7C9ED3903FCA0E /* Pods_MixalotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C843E587C3B2B6883EC0F8A8 /* Pods_MixalotTests.framework */; };
 		30151E76865C4E4B17E47A30 /* Pods_Mixalot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 856C20FDF0145BC40B8E68CE /* Pods_Mixalot.framework */; };
+		3429D5F3204B75AD00AF3E0E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3429D5F2204B75AD00AF3E0E /* Extensions.swift */; };
 		34AF022F204B526D00A6B9CD /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AF022E204B526D00A6B9CD /* ItemCell.swift */; };
 		34DE824B204B38F800870884 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE824A204B38F800870884 /* AppDelegate.swift */; };
 		34DE824D204B38F800870884 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE824C204B38F800870884 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 		34DE8263204B38F800870884 /* MixalotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE8262204B38F800870884 /* MixalotTests.swift */; };
 		34DE826E204B38F800870884 /* MixalotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE826D204B38F800870884 /* MixalotUITests.swift */; };
 		34F40602204B584C003189A9 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F40601204B584C003189A9 /* SearchVC.swift */; };
+		34F40604204B676A003189A9 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F40603204B676A003189A9 /* TabBarController.swift */; };
 		7A4F107F204B3E34002456A2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4F107E204B3E34002456A2 /* User.swift */; };
 		7A72D2A2204B3FEF0049A4EF /* ItemViewer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A72D29B204B3FEF0049A4EF /* ItemViewer.storyboard */; };
 		7A72D2A3204B3FEF0049A4EF /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A72D29C204B3FEF0049A4EF /* Search.storyboard */; };
@@ -54,6 +56,7 @@
 /* Begin PBXFileReference section */
 		05E24177BB01071FA74D6A84 /* Pods-MixalotUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MixalotUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MixalotUITests/Pods-MixalotUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0F2C869110E6E2BE70DA9EB1 /* Pods_MixalotUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MixalotUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3429D5F2204B75AD00AF3E0E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = ../../../../../../kaleb/Documents/SideProjects/Mixalot/Mixalot/Extensions/Extensions.swift; sourceTree = "<group>"; };
 		34AF022E204B526D00A6B9CD /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemCell.swift; path = "../../../../../../kaleb/Documents/SideProjects/Mixalot/Mixalot/Custom Objects/ItemCell.swift"; sourceTree = "<group>"; };
 		34DE8247204B38F800870884 /* Mixalot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mixalot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DE824A204B38F800870884 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,7 +72,8 @@
 		34DE8269204B38F800870884 /* MixalotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MixalotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DE826D204B38F800870884 /* MixalotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixalotUITests.swift; sourceTree = "<group>"; };
 		34DE826F204B38F800870884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		34F40601204B584C003189A9 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchVC.swift; path = ../../../../../../kaleb/Documents/SideProjects/Mixalot/Mixalot/ViewControllers/SearchVC.swift; sourceTree = "<group>"; };
+		34F40601204B584C003189A9 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchVC.swift; path = ../../../../kaleb/Documents/SideProjects/Mixalot/Mixalot/ViewControllers/SearchVC.swift; sourceTree = SOURCE_ROOT; };
+		34F40603204B676A003189A9 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarController.swift; path = ../../../../../../kaleb/Documents/SideProjects/Mixalot/Mixalot/ViewControllers/TabBarController.swift; sourceTree = "<group>"; };
 		7A4F107E204B3E34002456A2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7A72D29B204B3FEF0049A4EF /* ItemViewer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ItemViewer.storyboard; sourceTree = "<group>"; };
 		7A72D29C204B3FEF0049A4EF /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
@@ -119,6 +123,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3429D5F1204B759B00AF3E0E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3429D5F2204B75AD00AF3E0E /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		34DE823E204B38F700870884 = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +156,7 @@
 		34DE8249204B38F800870884 /* Mixalot */ = {
 			isa = PBXGroup;
 			children = (
+				3429D5F1204B759B00AF3E0E /* Extensions */,
 				34F40600204B5839003189A9 /* ViewControllers */,
 				7A72D2AB204B43140049A4EF /* Database */,
 				7A72D29A204B3FEF0049A4EF /* Storyboards */,
@@ -181,6 +194,7 @@
 		34F40600204B5839003189A9 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				34F40603204B676A003189A9 /* TabBarController.swift */,
 				34F40601204B584C003189A9 /* SearchVC.swift */,
 			);
 			path = ViewControllers;
@@ -459,6 +473,7 @@
 				"${BUILT_PRODUCTS_DIR}/Skeleton/Skeleton.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/SwipeableTabBarController/SwipeableTabBarController.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -473,6 +488,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Skeleton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeableTabBarController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -566,11 +582,13 @@
 				34AF022F204B526D00A6B9CD /* ItemCell.swift in Sources */,
 				34DE824D204B38F800870884 /* ViewController.swift in Sources */,
 				7A72D2AA204B40750049A4EF /* Drink.swift in Sources */,
+				34F40604204B676A003189A9 /* TabBarController.swift in Sources */,
 				34F40602204B584C003189A9 /* SearchVC.swift in Sources */,
 				34DE824B204B38F800870884 /* AppDelegate.swift in Sources */,
 				7A72D2AD204B44900049A4EF /* DrinkDatabase.swift in Sources */,
 				7A4F107F204B3E34002456A2 /* User.swift in Sources */,
 				7A72D2AF204B44A00049A4EF /* FBDatabase.swift in Sources */,
+				3429D5F3204B75AD00AF3E0E /* Extensions.swift in Sources */,
 				34DE8253204B38F800870884 /* Mixalot.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

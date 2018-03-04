@@ -56,6 +56,7 @@ PODS:
   - Skeleton (0.2.2)
   - SkyFloatingLabelTextField (3.4.0)
   - SwiftyJSON (4.0.0)
+  - SwipeableTabBarController (1.0.15)
 
 DEPENDENCIES:
   - DOFavoriteButton
@@ -69,6 +70,7 @@ DEPENDENCIES:
   - Skeleton
   - SkyFloatingLabelTextField
   - SwiftyJSON
+  - SwipeableTabBarController
 
 SPEC CHECKSUMS:
   DOFavoriteButton: 866e15af173d2dd5233971a1f657a5f31d2491d5
@@ -89,7 +91,8 @@ SPEC CHECKSUMS:
   Skeleton: ad6bff17deb4c8a1e037140a37a817bd6dcade4c
   SkyFloatingLabelTextField: 703aa1420b697392b1e7dba25571180dde018477
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+  SwipeableTabBarController: 8b02dc2f4f4899f8bb35ccad16ea34a0da1fb465
 
-PODFILE CHECKSUM: 98ca9d0e0df84f73c847f3c3b17d5f016ed0ecb8
+PODFILE CHECKSUM: 2258338b2592044003a00d3017ef5a1d589e3e01
 
 COCOAPODS: 1.4.0
