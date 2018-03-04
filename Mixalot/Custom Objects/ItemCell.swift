@@ -18,20 +18,20 @@ class ItemCell: UITableViewCell {
     @IBOutlet weak var ingred3Outlet: UILabel!
     @IBOutlet weak var ingred4Outlet: UILabel!
     @IBOutlet weak var favoriteNumberOutlet: UILabel!
-    //@IBOutlet weak var heartButton: DOFavoriteButton!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         
-//        heartButton.imageColorOn = UIColor(red: 254/255, green: 110/255, blue: 111/255, alpha: 1.0)
-//        heartButton.circleColor = UIColor(red: 254/255, green: 110/255, blue: 111/255, alpha: 1.0)
-//        heartButton.lineColor = UIColor(red: 226/255, green: 96/255, blue: 96/255, alpha: 1.0)
-//        heartButton.addTarget(self, action: #selector(self.tappedButton), for: .touchDown)
+        let favAmount = randRange(lower: 0, upper: 1000)
+        favoriteNumberOutlet.text = "\(favAmount)"
+        let value = randRange(lower: 0, upper: 10)
         
-        //heartOutlet.addTarget(self, action: Selector("tapped:"), for: .touchUpInside)
-        //heartOutlet.addTarget(self, action: #selector(tapped), for: .touchUpInside)
+        
+    }
+    
+    func randRange (lower: Int , upper: Int) -> Int {
+        return lower + Int(arc4random_uniform(UInt32(upper - lower + 1)))
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -40,13 +40,6 @@ class ItemCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    @objc func tappedButton(sender: DOFavoriteButton) {
-        if sender.isSelected {
-            sender.deselect()
-        } else {
-            sender.select()
-        }
-    }
     
     
     

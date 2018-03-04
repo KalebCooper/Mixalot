@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class CocktailsVC: UITableViewController {
     
@@ -15,12 +16,19 @@ class CocktailsVC: UITableViewController {
     @IBOutlet weak var favoriteOutlet: UIButton!
     @IBOutlet weak var ingredientsTable: UITableView!
     @IBOutlet weak var instructionsOutlet: UITextView!
-    @IBOutlet weak var similarCollection: UICollectionView!
     
     
     @IBAction func favoriteAction(_ sender: Any) {
+        
     }
+    
+    
     var gradientLayer: CAGradientLayer!
+    var ingredients: [String] = []
+    //var ingredientsSize: [String] = []
+    
+    var drink: Drink!
+    var image: UIImage!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +39,26 @@ class CocktailsVC: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    func setupCocktail() {
+        
+        ingredientsTable.delegate = self
+        ingredientsTable.dataSource = self
+        
+        if self.drink != nil {
+            
+            titleOutlet.text = drink.name
+            imageOutlet.image = image
+            instructionsOutlet.text = drink.instruction
+            self.ingredients = drink.ingredients
+            
+            
+            self.ingredientsTable.reloadData()
+        }
+        
+        
+        
     }
 
     func createGradientLayer() {
@@ -50,23 +78,32 @@ class CocktailsVC: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
+        
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        if tableView == ingredientsTable {
+            return self.ingredients.count
+        }
+        else {
+            return 0
+        }
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath)
+    
+        cell.textLabel?.text = ingredients[indexPath.row]
+        cell.textLabel?.textColor = UIColor.white
 
         // Configure the cell...
 
         return cell
     }
-    */
+ 
 
     /*
     // Override to support conditional editing of the table view.

@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class DrinkListCV: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class DrinkListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     // MARK: - Properties
     private var user: User!
@@ -17,6 +17,13 @@ class DrinkListCV: UIViewController, UITableViewDelegate, UITableViewDataSource 
     private var drinks: [Drink]!
     
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBAction func refreshAction(_ sender: Any) {
+        
+        filterDrinks()
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //testSingleDrink()
@@ -26,7 +33,7 @@ class DrinkListCV: UIViewController, UITableViewDelegate, UITableViewDataSource 
         //testSingleQuery()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
@@ -34,7 +41,7 @@ class DrinkListCV: UIViewController, UITableViewDelegate, UITableViewDataSource 
     private func setup() {
         tableView.delegate = self
         tableView.dataSource = self
-        ingredientThreshold = 2
+        ingredientThreshold = 3
         drinks = []
         let ref = Database.database().reference()
         guard let id = FBDatabase.getSignedInID() else {
@@ -50,32 +57,43 @@ class DrinkListCV: UIViewController, UITableViewDelegate, UITableViewDataSource 
             }
         })
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Table view data source
-
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return drinks.count
     }
     
+//    private func filterDrinksThreading(_ completionBLock: @escaping (_ success: Bool, _ error: NSError?) -> ()) {
+//
+//
+//
+//
+//    }
+    
     private func filterDrinks() {
+        
+        DispatchQueue.main.async {
+            
+            self.drinks = []
         var previousQueriedDrinkIDs: [String] = []
         var filteredQueriedDrinkIDs: [String] = []
         var ingredCount = 0
         print("Started")
-        for ingredient in user.ingredients {
+            for ingredient in self.user.ingredients {
             ingredCount = ingredCount + 1
-            if ingredCount > ingredientThreshold {
+                if ingredCount > self.ingredientThreshold {
                 break
             }
             if let jsonObjects = DrinkDatabase.getDrinks(with_ingredient: ingredient ){
@@ -115,7 +133,8 @@ class DrinkListCV: UIViewController, UITableViewDelegate, UITableViewDataSource 
             print(previousID)
         }
         print("Ended")
-        loadDrinks(drinkIDs: previousQueriedDrinkIDs)
+            self.loadDrinks(drinkIDs: previousQueriedDrinkIDs)
+        }
     }
     
     private func loadDrinks(drinkIDs: [String]) {
@@ -124,7 +143,10 @@ class DrinkListCV: UIViewController, UITableViewDelegate, UITableViewDataSource 
                 self.drinks.append(drink)
             }
         }
-        tableView.reloadData()
+        
+        
+            self.tableView.reloadData()
+        
     }
     
     private func testSingleDrink() {
@@ -206,6 +228,7 @@ class DrinkListCV: UIViewController, UITableViewDelegate, UITableViewDataSource 
         let drink = self.drinks[indexPath.row]
         cell.titleOutlet.text = drink.name
         let ingredients = drink.ingredients
+        cell.imageOutlet.image = ImageSelector.pickCocktailImage(title: drink.name, ingredients: ingredients!)
         if ingredients?.count == 1 {
             cell.ingred1Outlet.text = ingredients?[0]
         }
@@ -224,53 +247,55 @@ class DrinkListCV: UIViewController, UITableViewDelegate, UITableViewDataSource 
             cell.ingred3Outlet.text = ingredients![2]
             cell.ingred4Outlet.text = ingredients![3]
         }
+        
+        
         return cell
     }
     
-
+    
     /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
+     // Override to support conditional editing of the table view.
+     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+     // Return false if you do not want the specified item to be editable.
+     return true
+     }
+     */
+    
     /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
+     // Override to support editing the table view.
+     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+     if editingStyle == .delete {
+     // Delete the row from the data source
+     tableView.deleteRows(at: [indexPath], with: .fade)
+     } else if editingStyle == .insert {
+     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+     }
+     }
+     */
+    
     /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
+     // Override to support rearranging the table view.
+     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+     
+     }
+     */
+    
     /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
+     // Override to support conditional rearranging of the table view.
+     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+     // Return false if you do not want the item to be re-orderable.
+     return true
+     }
+     */
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
