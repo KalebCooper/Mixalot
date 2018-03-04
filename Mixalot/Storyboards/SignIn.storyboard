@@ -240,7 +240,7 @@
                 <viewControllerPlaceholder storyboardName="CreateAccount" id="42H-GQ-GK0" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="chw-HU-OXB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1708" y="-216"/>
+            <point key="canvasLocation" x="1708" y="-160"/>
         </scene>
         <!--Sign In TransitionVC-->
         <scene sceneID="P5P-ts-JPv">
