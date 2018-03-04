@@ -60,7 +60,7 @@ class DrinkListCV: UIViewController, UITableViewDelegate, UITableViewDataSource 
         return 0
     }
     
-    private func getDrinkIDs() {
+    private func loadDrinks() {
         var previousQueriedDrinkIDs: [String] = []
         var filteredQueriedDrinkIDs: [String] = []
         print("Started")
