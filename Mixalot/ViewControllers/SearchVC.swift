@@ -20,7 +20,6 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideKeyboard()
         print("Called")
         setupSearchBar()
         setup()
@@ -44,6 +43,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
         ingredientsDrinks = []
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.allowsSelection = true
         if let ingredients = DrinkDatabase.getIngredients() {
             for ingredient in ingredients {
                 print(ingredient)
@@ -76,6 +76,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Called")
         let cell = tableView.cellForRow(at: indexPath) as! ItemCell
         let cellData = ingredientsDrinks[indexPath.row]
         if let ingredient = cellData as? String {
