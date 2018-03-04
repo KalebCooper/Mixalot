@@ -15,6 +15,8 @@
 		346E57D1204BBDA4002F755E /* Cocktail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 346E57D0204BBDA4002F755E /* Cocktail.storyboard */; };
 		34A132C0204BEACF00D86B55 /* IngredientsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A132BF204BEACF00D86B55 /* IngredientsVC.swift */; };
 		34A132C2204BEBB300D86B55 /* CocktailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A132C1204BEBB300D86B55 /* CocktailsVC.swift */; };
+		34AA9889204C0F47002E254E /* BarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AA9888204C0F47002E254E /* BarVC.swift */; };
+		34AA988B204C14C6002E254E /* BarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AA988A204C14C6002E254E /* BarCell.swift */; };
 		34DE824B204B38F800870884 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE824A204B38F800870884 /* AppDelegate.swift */; };
 		34DE824D204B38F800870884 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE824C204B38F800870884 /* ViewController.swift */; };
 		34DE8250204B38F800870884 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34DE824E204B38F800870884 /* Main.storyboard */; };
@@ -74,6 +76,8 @@
 		346E57D0204BBDA4002F755E /* Cocktail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Cocktail.storyboard; path = ../../../../../../kaleb/Documents/SideProjects/Mixalot/Mixalot/Storyboards/Cocktail.storyboard; sourceTree = "<group>"; };
 		34A132BF204BEACF00D86B55 /* IngredientsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IngredientsVC.swift; path = ../../../../../../kaleb/Documents/SideProjects/Mixalot/Mixalot/ViewControllers/IngredientsVC.swift; sourceTree = "<group>"; };
 		34A132C1204BEBB300D86B55 /* CocktailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CocktailsVC.swift; path = ../../../../../../kaleb/Documents/SideProjects/Mixalot/Mixalot/ViewControllers/CocktailsVC.swift; sourceTree = "<group>"; };
+		34AA9888204C0F47002E254E /* BarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BarVC.swift; path = ../../../../../../kaleb/Documents/SideProjects/Mixalot/Mixalot/ViewControllers/BarVC.swift; sourceTree = "<group>"; };
+		34AA988A204C14C6002E254E /* BarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BarCell.swift; path = "../../../../../../kaleb/Documents/SideProjects/Mixalot/Mixalot/Custom Objects/BarCell.swift"; sourceTree = "<group>"; };
 		34DE8247204B38F800870884 /* Mixalot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mixalot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DE824A204B38F800870884 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34DE824C204B38F800870884 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -231,6 +235,7 @@
 		34F40600204B5839003189A9 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				34AA9888204C0F47002E254E /* BarVC.swift */,
 				34A132C1204BEBB300D86B55 /* CocktailsVC.swift */,
 				34A132BF204BEACF00D86B55 /* IngredientsVC.swift */,
 				7ADB6032204BAC6500F1D2C0 /* CreateAccountVC.swift */,
@@ -248,6 +253,7 @@
 			children = (
 				7ADB6044204BD70300F1D2C0 /* ItemCell.swift */,
 				7A4F107E204B3E34002456A2 /* User.swift */,
+				34AA988A204C14C6002E254E /* BarCell.swift */,
 				7A72D2A9204B40750049A4EF /* Drink.swift */,
 			);
 			path = "Custom Objects";
@@ -631,6 +637,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34DE824D204B38F800870884 /* ViewController.swift in Sources */,
+				34AA988B204C14C6002E254E /* BarCell.swift in Sources */,
 				7A72D2AA204B40750049A4EF /* Drink.swift in Sources */,
 				7ADB6045204BD70300F1D2C0 /* ItemCell.swift in Sources */,
 				7ADB6036204BAC6500F1D2C0 /* CreateAccountVC.swift in Sources */,
@@ -647,6 +654,7 @@
 				7A72D2AF204B44A00049A4EF /* FBDatabase.swift in Sources */,
 				7AF46870204B972100A3A474 /* DrinkList.swift in Sources */,
 				34DE8253204B38F800870884 /* Mixalot.xcdatamodeld in Sources */,
+				34AA9889204C0F47002E254E /* BarVC.swift in Sources */,
 				34A132C0204BEACF00D86B55 /* IngredientsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
