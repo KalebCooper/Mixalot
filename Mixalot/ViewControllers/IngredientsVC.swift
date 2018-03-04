@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class IngredientsVC: UIViewController {
     
@@ -22,6 +23,27 @@ class IngredientsVC: UIViewController {
         
         
     }
+    
+    
+    @IBAction func backPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func addToBarPressed(_ sender: Any) {
+        let ref = Database.database().reference()
+        let id = FBDatabase.getSignedInID()
+        FBDatabase.getUser(with_id: id!, ref: ref, with_completion: {(user) in
+            if let activeUser = user {
+                activeUser.ingredients.append(self.ingredient)
+                print("")
+            }
+            else {
+                print("Did not get user in Ingredients VC")
+            }
+        })
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if ingredient != nil {

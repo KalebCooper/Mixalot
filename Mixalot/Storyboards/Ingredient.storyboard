@@ -45,6 +45,14 @@
                                 </state>
                                 <connections>
                                     <action selector="addAction:" destination="FSA-f0-bDL" eventType="touchUpInside" id="4fR-wj-PA6"/>
+                                    <action selector="addToBarPressed:" destination="FSA-f0-bDL" eventType="touchUpInside" id="8lD-Yj-Rpl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTO-9N-Ggm">
+                                <rect key="frame" x="16" y="31" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backPressed:" destination="FSA-f0-bDL" eventType="touchUpInside" id="x6M-cj-Liw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -52,6 +60,8 @@
                         <constraints>
                             <constraint firstItem="oSy-PB-AUf" firstAttribute="centerY" secondItem="T1G-vb-ZSZ" secondAttribute="centerY" constant="-47" id="8x9-mm-twP"/>
                             <constraint firstItem="pBf-Lv-r25" firstAttribute="centerX" secondItem="oSy-PB-AUf" secondAttribute="centerX" id="DPb-Yb-O1b"/>
+                            <constraint firstItem="dTO-9N-Ggm" firstAttribute="top" secondItem="T1G-vb-ZSZ" secondAttribute="top" constant="31" id="DRh-jz-eaC"/>
+                            <constraint firstItem="dTO-9N-Ggm" firstAttribute="leading" secondItem="Dps-wJ-dtH" secondAttribute="leading" constant="16" id="QgX-7Y-Lps"/>
                             <constraint firstItem="Yha-n6-Yy0" firstAttribute="top" secondItem="pBf-Lv-r25" secondAttribute="bottom" constant="10" id="Wan-eE-U3V"/>
                             <constraint firstItem="Yha-n6-Yy0" firstAttribute="centerX" secondItem="pBf-Lv-r25" secondAttribute="centerX" id="b6e-6g-B5i"/>
                             <constraint firstItem="pBf-Lv-r25" firstAttribute="top" secondItem="oSy-PB-AUf" secondAttribute="bottom" constant="8" id="oeo-Xf-Twb"/>
