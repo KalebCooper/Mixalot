@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import DOFavoriteButton
 import Firebase
 
 class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate{

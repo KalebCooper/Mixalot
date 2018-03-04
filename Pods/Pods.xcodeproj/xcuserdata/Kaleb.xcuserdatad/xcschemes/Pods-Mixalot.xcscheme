@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D8B96A16C81772C06699E7C74387FFE5"
+               BlueprintIdentifier = "61580FBEAACD7BF96D3C3B96CBCF4A2B"
                BuildableName = "Pods_Mixalot.framework"
                BlueprintName = "Pods-Mixalot"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -26,7 +26,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -37,7 +36,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -47,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D8B96A16C81772C06699E7C74387FFE5"
+            BlueprintIdentifier = "61580FBEAACD7BF96D3C3B96CBCF4A2B"
             BuildableName = "Pods_Mixalot.framework"
             BlueprintName = "Pods-Mixalot"
             ReferencedContainer = "container:Pods.xcodeproj">

@@ -1,5 +1,4 @@
 PODS:
-  - DOFavoriteButton (0.0.4)
   - Firebase/Auth (4.9.0):
     - Firebase/Core
     - FirebaseAuth (= 4.4.3)
@@ -53,13 +52,11 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
-  - Skeleton (0.2.2)
   - SkyFloatingLabelTextField (3.4.0)
   - SwiftyJSON (4.0.0)
   - SwipeableTabBarController (1.0.15)
 
 DEPENDENCIES:
-  - DOFavoriteButton
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
@@ -67,13 +64,11 @@ DEPENDENCIES:
   - Hero
   - IHKeyboardAvoiding
   - LGButton
-  - Skeleton
   - SkyFloatingLabelTextField
   - SwiftyJSON
   - SwipeableTabBarController
 
 SPEC CHECKSUMS:
-  DOFavoriteButton: 866e15af173d2dd5233971a1f657a5f31d2491d5
   Firebase: 632216af3ed7f31e3be34776947fdc7546cfb572
   FirebaseAnalytics: 388b630c15713f5dbf364071f5f3d6077fb52f4e
   FirebaseAuth: aaaf68d5064a6c8fec435758f83a43b8db26ccaa
@@ -88,11 +83,10 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   LGButton: 707ce916eb80b73a6c4688df34bee11adbafb663
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
-  Skeleton: ad6bff17deb4c8a1e037140a37a817bd6dcade4c
   SkyFloatingLabelTextField: 703aa1420b697392b1e7dba25571180dde018477
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   SwipeableTabBarController: 8b02dc2f4f4899f8bb35ccad16ea34a0da1fb465
 
-PODFILE CHECKSUM: 2258338b2592044003a00d3017ef5a1d589e3e01
+PODFILE CHECKSUM: 061977264dcaf949e3d518306603cfd443161cbf
 
 COCOAPODS: 1.4.0
