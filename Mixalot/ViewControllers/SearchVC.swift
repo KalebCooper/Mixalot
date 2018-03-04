@@ -42,6 +42,8 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     
     private func setup() {
         ingredientsDrinks = []
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
         if let ingredients = DrinkDatabase.getIngredients() {
             for ingredient in ingredients {
                 print(ingredient)
@@ -74,12 +76,15 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! ItemCell
         let cellData = ingredientsDrinks[indexPath.row]
         if let ingredient = cellData as? String {
-            self.performSegue(withIdentifier: "IngredientSegue", sender: nil)
+            let infoArray = [cell.imageOutlet.image, ingredient] as [Any]
+            self.performSegue(withIdentifier: "IngredientSegue", sender: infoArray)
         }
         else if let drink = cellData as? Drink {
-            self.performSegue(withIdentifier: "DrinkSegue", sender: nil)
+            let infoArray = [cell.imageOutlet.image, drink] as [Any]
+            self.performSegue(withIdentifier: "DrinkSegue", sender: infoArray)
         }
     }
     
@@ -98,14 +103,24 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        let segueID = segue.identifier
+        let infoArray = sender as! [Any]
+        if segueID == "IngredientSegue" {
+            let destination = segue.destination as! IngredientsVC
+            destination.image = infoArray[0] as! UIImage
+            destination.ingredient = infoArray[1] as! String
+        }
+        else if segueID == "DrinkSegue" {
+            
+        }
     }
-    */
+    
 
 }
