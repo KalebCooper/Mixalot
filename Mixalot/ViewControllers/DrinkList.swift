@@ -14,13 +14,15 @@ class DrinkListCV: UIViewController, UITableViewDelegate, UITableViewDataSource 
     // MARK: - Properties
     private var user: User!
     private var ingredientThreshold: Int!
+    private var drinks: [Drink]!
     
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         //testSingleDrink()
-        //setup()
+        setup()
         //getDrinkIDs()
-        testAPIFilter()
+        //testAPIFilter()
         //testSingleQuery()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -30,6 +32,10 @@ class DrinkListCV: UIViewController, UITableViewDelegate, UITableViewDataSource 
     }
     
     private func setup() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        ingredientThreshold = 2
+        drinks = []
         let ref = Database.database().reference()
         guard let id = FBDatabase.getSignedInID() else {
             return
@@ -37,6 +43,7 @@ class DrinkListCV: UIViewController, UITableViewDelegate, UITableViewDataSource 
         FBDatabase.getUser(with_id: id, ref: ref, with_completion: {(user) in
             if let activeUser = user {
                 self.user = activeUser
+                self.filterDrinks()
             }
             else {
                 print("Could not get user in DrinkList VC")
@@ -53,19 +60,24 @@ class DrinkListCV: UIViewController, UITableViewDelegate, UITableViewDataSource 
 
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return drinks.count
     }
     
-    private func loadDrinks() {
+    private func filterDrinks() {
         var previousQueriedDrinkIDs: [String] = []
         var filteredQueriedDrinkIDs: [String] = []
+        var ingredCount = 0
         print("Started")
         for ingredient in user.ingredients {
+            ingredCount = ingredCount + 1
+            if ingredCount > ingredientThreshold {
+                break
+            }
             if let jsonObjects = DrinkDatabase.getDrinks(with_ingredient: ingredient ){
                 var currentDrinkIDs: [String] = []
                 for jsonObject in jsonObjects {
@@ -107,7 +119,12 @@ class DrinkListCV: UIViewController, UITableViewDelegate, UITableViewDataSource 
     }
     
     private func loadDrinks(drinkIDs: [String]) {
-        
+        for drinkID in drinkIDs {
+            if let drink = DrinkDatabase.getDrink(with_id: drinkID) {
+                self.drinks.append(drink)
+            }
+        }
+        tableView.reloadData()
     }
     
     private func testSingleDrink() {
@@ -120,11 +137,19 @@ class DrinkListCV: UIViewController, UITableViewDelegate, UITableViewDataSource 
     }
     
     private func testAPIFilter() {
-        let ingredients = ["Tequila", "Triple sec"]
+        while self.user != nil {
+            
+        }
+        let ingredients = ["Tequila", "Triple sec", "Lime juice"]
         var previousQueriedDrinkIDs: [String] = []
         var filteredQueriedDrinkIDs: [String] = []
+        var ingredCount = 0
         print("Started")
         for ingredient in ingredients {
+            ingredCount = ingredCount + 1
+            if ingredCount > ingredientThreshold {
+                break
+            }
             if let jsonObjects = DrinkDatabase.getDrinks(with_ingredient: ingredient ){
                 var currentDrinkIDs: [String] = []
                 for jsonObject in jsonObjects {
@@ -178,18 +203,30 @@ class DrinkListCV: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! ItemCell
+        let drink = self.drinks[indexPath.row]
+        cell.titleOutlet.text = drink.name
+        let ingredients = drink.ingredients
+        if ingredients?.count == 1 {
+            cell.ingred1Outlet.text = ingredients?[0]
+        }
+        else if ingredients?.count == 2 {
+            cell.ingred1Outlet.text = ingredients![0]
+            cell.ingred2Outlet.text = ingredients![1]
+        }
+        else if ingredients?.count == 3 {
+            cell.ingred1Outlet.text = ingredients![0]
+            cell.ingred2Outlet.text = ingredients![1]
+            cell.ingred3Outlet.text = ingredients![2]
+        }
+        else {
+            cell.ingred1Outlet.text = ingredients![0]
+            cell.ingred2Outlet.text = ingredients![1]
+            cell.ingred3Outlet.text = ingredients![2]
+            cell.ingred4Outlet.text = ingredients![3]
+        }
         return cell
     }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

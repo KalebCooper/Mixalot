@@ -92,7 +92,7 @@
 		34DE8269204B38F800870884 /* MixalotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MixalotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DE826D204B38F800870884 /* MixalotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixalotUITests.swift; sourceTree = "<group>"; };
 		34DE826F204B38F800870884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		34DE8BD9204BE3F0009064D6 /* Ingredient.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Ingredient.storyboard; path = ../../../../../../kaleb/Documents/SideProjects/Mixalot/Mixalot/Storyboards/Ingredient.storyboard; sourceTree = "<group>"; };
+		34DE8BD9204BE3F0009064D6 /* Ingredient.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Ingredient.storyboard; path = Mixalot/Storyboards/Ingredient.storyboard; sourceTree = SOURCE_ROOT; };
 		7A4F107E204B3E34002456A2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7A72D29B204B3FEF0049A4EF /* ItemViewer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ItemViewer.storyboard; sourceTree = "<group>"; };
 		7A72D29C204B3FEF0049A4EF /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
@@ -823,7 +823,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VPT5835T5T;
+				DEVELOPMENT_TEAM = CZ7R6F7L6H;
 				INFOPLIST_FILE = Mixalot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Kaleb-Cooper-Team-Red.Mixalot";
@@ -839,7 +839,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VPT5835T5T;
+				DEVELOPMENT_TEAM = CZ7R6F7L6H;
 				INFOPLIST_FILE = Mixalot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Kaleb-Cooper-Team-Red.Mixalot";
