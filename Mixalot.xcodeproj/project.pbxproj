@@ -10,6 +10,12 @@
 		1B31B1BBAC7C9ED3903FCA0E /* Pods_MixalotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C843E587C3B2B6883EC0F8A8 /* Pods_MixalotTests.framework */; };
 		30151E76865C4E4B17E47A30 /* Pods_Mixalot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 856C20FDF0145BC40B8E68CE /* Pods_Mixalot.framework */; };
 		3429D5F3204B75AD00AF3E0E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3429D5F2204B75AD00AF3E0E /* Extensions.swift */; };
+		3429D5F6204B9DF800AF3E0E /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3429D5F4204B9DF700AF3E0E /* SignIn.storyboard */; };
+		3429D5F7204B9DF800AF3E0E /* CreateAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3429D5F5204B9DF700AF3E0E /* CreateAccount.storyboard */; };
+		3429D5FB204BA5A600AF3E0E /* SignInTransitionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3429D5F8204BA5A600AF3E0E /* SignInTransitionVC.swift */; };
+		3429D5FC204BA5A600AF3E0E /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3429D5F9204BA5A600AF3E0E /* SignInVC.swift */; };
+		3429D5FD204BA5A600AF3E0E /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3429D5FA204BA5A600AF3E0E /* CreateAccountVC.swift */; };
+		3429D5FF204BA64700AF3E0E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3429D5FE204BA64700AF3E0E /* Launch Screen.storyboard */; };
 		34AF022F204B526D00A6B9CD /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AF022E204B526D00A6B9CD /* ItemCell.swift */; };
 		34DE824B204B38F800870884 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE824A204B38F800870884 /* AppDelegate.swift */; };
 		34DE824D204B38F800870884 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE824C204B38F800870884 /* ViewController.swift */; };
@@ -56,6 +62,12 @@
 		05E24177BB01071FA74D6A84 /* Pods-MixalotUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MixalotUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MixalotUITests/Pods-MixalotUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0F2C869110E6E2BE70DA9EB1 /* Pods_MixalotUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MixalotUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3429D5F2204B75AD00AF3E0E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = ../../../../../../kaleb/Documents/SideProjects/Mixalot/Mixalot/Extensions/Extensions.swift; sourceTree = "<group>"; };
+		3429D5F4204B9DF700AF3E0E /* SignIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SignIn.storyboard; path = ../../../../../../kaleb/Documents/SideProjects/Mixalot/Mixalot/Storyboards/SignIn.storyboard; sourceTree = "<group>"; };
+		3429D5F5204B9DF700AF3E0E /* CreateAccount.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CreateAccount.storyboard; path = ../../../../../../kaleb/Documents/SideProjects/Mixalot/Mixalot/Storyboards/CreateAccount.storyboard; sourceTree = "<group>"; };
+		3429D5F8204BA5A600AF3E0E /* SignInTransitionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInTransitionVC.swift; path = ../../../../../../kaleb/Documents/SideProjects/Mixalot/Mixalot/ViewControllers/SignInTransitionVC.swift; sourceTree = "<group>"; };
+		3429D5F9204BA5A600AF3E0E /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInVC.swift; path = ../../../../../../kaleb/Documents/SideProjects/Mixalot/Mixalot/ViewControllers/SignInVC.swift; sourceTree = "<group>"; };
+		3429D5FA204BA5A600AF3E0E /* CreateAccountVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateAccountVC.swift; path = ../../../../../../kaleb/Documents/SideProjects/Mixalot/Mixalot/ViewControllers/CreateAccountVC.swift; sourceTree = "<group>"; };
+		3429D5FE204BA64700AF3E0E /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "../../../../../../kaleb/Documents/SideProjects/Mixalot/Mixalot/Storyboards/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		34AF022E204B526D00A6B9CD /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemCell.swift; path = "../../../../../../kaleb/Documents/SideProjects/Mixalot/Mixalot/Custom Objects/ItemCell.swift"; sourceTree = "<group>"; };
 		34DE8247204B38F800870884 /* Mixalot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mixalot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DE824A204B38F800870884 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -192,6 +204,9 @@
 		34F40600204B5839003189A9 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				3429D5FA204BA5A600AF3E0E /* CreateAccountVC.swift */,
+				3429D5F8204BA5A600AF3E0E /* SignInTransitionVC.swift */,
+				3429D5F9204BA5A600AF3E0E /* SignInVC.swift */,
 				34F40603204B676A003189A9 /* TabBarController.swift */,
 				34F40601204B584C003189A9 /* SearchVC.swift */,
 			);
@@ -211,6 +226,9 @@
 		7A72D29A204B3FEF0049A4EF /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				3429D5FE204BA64700AF3E0E /* Launch Screen.storyboard */,
+				3429D5F5204B9DF700AF3E0E /* CreateAccount.storyboard */,
+				3429D5F4204B9DF700AF3E0E /* SignIn.storyboard */,
 				7A72D29B204B3FEF0049A4EF /* ItemViewer.storyboard */,
 				7A72D29C204B3FEF0049A4EF /* Search.storyboard */,
 				7A72D29D204B3FEF0049A4EF /* Favorites.storyboard */,
@@ -373,9 +391,12 @@
 				7A72D2A2204B3FEF0049A4EF /* ItemViewer.storyboard in Resources */,
 				7A72D2A4204B3FEF0049A4EF /* Favorites.storyboard in Resources */,
 				34DE8255204B38F800870884 /* Assets.xcassets in Resources */,
+				3429D5FF204BA64700AF3E0E /* Launch Screen.storyboard in Resources */,
 				7A72D2A7204B3FEF0049A4EF /* DrinkList.storyboard in Resources */,
 				34DE8250204B38F800870884 /* Main.storyboard in Resources */,
+				3429D5F6204B9DF800AF3E0E /* SignIn.storyboard in Resources */,
 				7A72D2A5204B3FEF0049A4EF /* Bar.storyboard in Resources */,
+				3429D5F7204B9DF800AF3E0E /* CreateAccount.storyboard in Resources */,
 				7A72D2B1204B51470049A4EF /* GoogleService-Info.plist in Resources */,
 				7A72D2A3204B3FEF0049A4EF /* Search.storyboard in Resources */,
 				7A72D2A8204B3FEF0049A4EF /* Settings.storyboard in Resources */,
@@ -579,9 +600,12 @@
 				34DE824D204B38F800870884 /* ViewController.swift in Sources */,
 				7A72D2AA204B40750049A4EF /* Drink.swift in Sources */,
 				34F40604204B676A003189A9 /* TabBarController.swift in Sources */,
+				3429D5FD204BA5A600AF3E0E /* CreateAccountVC.swift in Sources */,
 				34F40602204B584C003189A9 /* SearchVC.swift in Sources */,
+				3429D5FC204BA5A600AF3E0E /* SignInVC.swift in Sources */,
 				34DE824B204B38F800870884 /* AppDelegate.swift in Sources */,
 				7A72D2AD204B44900049A4EF /* DrinkDatabase.swift in Sources */,
+				3429D5FB204BA5A600AF3E0E /* SignInTransitionVC.swift in Sources */,
 				7A4F107F204B3E34002456A2 /* User.swift in Sources */,
 				7A72D2AF204B44A00049A4EF /* FBDatabase.swift in Sources */,
 				3429D5F3204B75AD00AF3E0E /* Extensions.swift in Sources */,
