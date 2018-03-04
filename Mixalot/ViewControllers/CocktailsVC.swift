@@ -19,7 +19,6 @@ class CocktailsVC: UITableViewController {
     
     
     @IBAction func favoriteAction(_ sender: Any) {
-        
     }
     
     
@@ -34,7 +33,7 @@ class CocktailsVC: UITableViewController {
         super.viewDidLoad()
         
         if drink != nil {
-            createGradientLayer()
+            //createGradientLayer()
             setupCocktail()
         }
         
@@ -61,6 +60,33 @@ class CocktailsVC: UITableViewController {
         
         
         
+    }
+    
+    func setupGestures() {
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
+        swipeLeft.direction = UISwipeGestureRecognizerDirection.left
+        self.tableView.addGestureRecognizer(swipeLeft)
+        
+    }
+    
+    @objc func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            switch swipeGesture.direction {
+            case UISwipeGestureRecognizerDirection.right:
+                print("Swiped right")
+            case UISwipeGestureRecognizerDirection.down:
+                print("Swiped down")
+            case UISwipeGestureRecognizerDirection.left:
+                print("Swiped left")
+                self.dismiss(animated: true, completion: nil)
+            case UISwipeGestureRecognizerDirection.up:
+                print("Swiped up")
+            //self.performSegue(withIdentifier: "toCameraSegue", sender: self)
+            default:
+                break
+            }
+        }
     }
     
     func createGradientLayer() {

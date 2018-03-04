@@ -10,14 +10,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--CocktailsVC-->
+        <!--cocktail-->
         <scene sceneID="kt0-6i-7L2">
             <objects>
                 <tableViewController id="bET-PH-iYL" customClass="CocktailsVC" customModule="Mixalot" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" tag="1" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="OaX-e0-NvQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.97254901959999995" green="0.12549019610000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection id="cek-jB-Xyg">
                                 <cells>
@@ -38,21 +38,11 @@
                                                         <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="imageID"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCR-E1-5ZZ">
-                                                    <rect key="frame" x="16" y="11" width="46" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="46" id="Gox-TX-8ko"/>
-                                                        <constraint firstAttribute="height" constant="30" id="fAv-ds-aF6"/>
-                                                    </constraints>
-                                                    <state key="normal" image="ArrowLeft">
-                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="gCR-E1-5ZZ" firstAttribute="top" secondItem="7JK-dW-A8L" secondAttribute="topMargin" id="00X-Tv-GDD"/>
-                                                <constraint firstItem="gCR-E1-5ZZ" firstAttribute="leading" secondItem="7JK-dW-A8L" secondAttribute="leadingMargin" id="Z53-da-iHf"/>
+                                                <constraint firstItem="L59-FL-sbO" firstAttribute="top" secondItem="7JK-dW-A8L" secondAttribute="topMargin" constant="8" id="UNb-ux-xcn"/>
                                                 <constraint firstItem="L59-FL-sbO" firstAttribute="centerY" secondItem="7JK-dW-A8L" secondAttribute="centerY" id="cqF-Wc-GGD"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="L59-FL-sbO" secondAttribute="bottom" constant="9" id="jWZ-x8-rWo"/>
                                                 <constraint firstItem="L59-FL-sbO" firstAttribute="centerX" secondItem="7JK-dW-A8L" secondAttribute="centerX" id="mXc-47-VLs"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -80,6 +70,8 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="GlY-Oj-FXV" firstAttribute="centerX" secondItem="bMw-a4-kGx" secondAttribute="centerX" id="Jlm-kj-svD"/>
+                                                <constraint firstAttribute="bottom" secondItem="GlY-Oj-FXV" secondAttribute="bottom" id="XSS-kE-rcv"/>
+                                                <constraint firstItem="GlY-Oj-FXV" firstAttribute="top" secondItem="bMw-a4-kGx" secondAttribute="top" id="ZF2-Jn-C0M"/>
                                                 <constraint firstItem="GlY-Oj-FXV" firstAttribute="centerY" secondItem="bMw-a4-kGx" secondAttribute="centerY" id="wkY-NE-cgg"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -109,7 +101,9 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="3de-yb-pFr" firstAttribute="centerX" secondItem="ZD8-4y-gB0" secondAttribute="centerX" id="HU7-Ww-qxc"/>
+                                                <constraint firstItem="3de-yb-pFr" firstAttribute="top" secondItem="ZD8-4y-gB0" secondAttribute="top" constant="3" id="OX5-88-gsh"/>
                                                 <constraint firstItem="3de-yb-pFr" firstAttribute="centerY" secondItem="ZD8-4y-gB0" secondAttribute="centerY" id="Pcm-I0-Fs9"/>
+                                                <constraint firstAttribute="bottom" secondItem="3de-yb-pFr" secondAttribute="bottom" constant="3" id="uOH-Tp-TCt"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -133,8 +127,10 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="caS-sd-jng" firstAttribute="top" secondItem="e2N-Ba-mkB" secondAttribute="top" id="3y6-w5-FqN"/>
                                                 <constraint firstItem="caS-sd-jng" firstAttribute="centerX" secondItem="e2N-Ba-mkB" secondAttribute="centerX" id="6Xj-wE-n7r"/>
                                                 <constraint firstItem="caS-sd-jng" firstAttribute="centerY" secondItem="e2N-Ba-mkB" secondAttribute="centerY" id="Fpb-me-nUg"/>
+                                                <constraint firstAttribute="bottom" secondItem="caS-sd-jng" secondAttribute="bottom" id="Rae-53-IS4"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -237,6 +233,7 @@
                             <outlet property="delegate" destination="bET-PH-iYL" id="0oG-SJ-Iog"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="cocktail" id="vh1-Ec-fBo"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
@@ -250,11 +247,30 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8TI-It-4H0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1176.8" y="117.48768472906404"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tlH-rh-iYb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Ljx-Wc-KIt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Al2-ye-pQb">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="bET-PH-iYL" kind="relationship" relationship="rootViewController" id="jBz-hA-YNF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vgo-F5-eg6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="234.40000000000001" y="117.48768472906404"/>
         </scene>
     </scenes>
     <resources>
-        <image name="ArrowLeft" width="33" height="33"/>
         <image name="dimHeart" width="100" height="100"/>
         <image name="greenCocktail1" width="512" height="512"/>
     </resources>
