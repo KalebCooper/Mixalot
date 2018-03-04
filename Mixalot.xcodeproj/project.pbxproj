@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1B31B1BBAC7C9ED3903FCA0E /* Pods_MixalotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C843E587C3B2B6883EC0F8A8 /* Pods_MixalotTests.framework */; };
 		30151E76865C4E4B17E47A30 /* Pods_Mixalot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 856C20FDF0145BC40B8E68CE /* Pods_Mixalot.framework */; };
-		34AF022F204B526D00A6B9CD /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AF022E204B526D00A6B9CD /* ItemCell.swift */; };
 		34DE824B204B38F800870884 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE824A204B38F800870884 /* AppDelegate.swift */; };
 		34DE824D204B38F800870884 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE824C204B38F800870884 /* ViewController.swift */; };
 		34DE8250204B38F800870884 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34DE824E204B38F800870884 /* Main.storyboard */; };
@@ -18,7 +17,6 @@
 		34DE8258204B38F800870884 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34DE8256204B38F800870884 /* LaunchScreen.storyboard */; };
 		34DE8263204B38F800870884 /* MixalotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE8262204B38F800870884 /* MixalotTests.swift */; };
 		34DE826E204B38F800870884 /* MixalotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34DE826D204B38F800870884 /* MixalotUITests.swift */; };
-		34F40602204B584C003189A9 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F40601204B584C003189A9 /* SearchVC.swift */; };
 		7A4F107F204B3E34002456A2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4F107E204B3E34002456A2 /* User.swift */; };
 		7A72D2A2204B3FEF0049A4EF /* ItemViewer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A72D29B204B3FEF0049A4EF /* ItemViewer.storyboard */; };
 		7A72D2A3204B3FEF0049A4EF /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A72D29C204B3FEF0049A4EF /* Search.storyboard */; };
@@ -32,6 +30,11 @@
 		7A72D2AF204B44A00049A4EF /* FBDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A72D2AE204B44A00049A4EF /* FBDatabase.swift */; };
 		7A72D2B1204B51470049A4EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A72D2B0204B51470049A4EF /* GoogleService-Info.plist */; };
 		7A72D2B3204B61FC0049A4EF /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A72D2B2204B61FC0049A4EF /* SignIn.storyboard */; };
+		7AD06025204B641900B34CF9 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD06024204B641900B34CF9 /* SearchVC.swift */; };
+		7AD06027204B642B00B34CF9 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD06026204B642B00B34CF9 /* ItemCell.swift */; };
+		7AD06029204B64AB00B34CF9 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD06028204B64AB00B34CF9 /* SignInVC.swift */; };
+		7AD0602B204B65CE00B34CF9 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD0602A204B65CE00B34CF9 /* CreateAccountVC.swift */; };
+		7AD0602D204B65F200B34CF9 /* CreateAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AD0602C204B65F200B34CF9 /* CreateAccount.storyboard */; };
 		C62614B6FE1671B9F63086CD /* Pods_MixalotUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2C869110E6E2BE70DA9EB1 /* Pods_MixalotUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,7 +58,6 @@
 /* Begin PBXFileReference section */
 		05E24177BB01071FA74D6A84 /* Pods-MixalotUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MixalotUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MixalotUITests/Pods-MixalotUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0F2C869110E6E2BE70DA9EB1 /* Pods_MixalotUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MixalotUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		34AF022E204B526D00A6B9CD /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemCell.swift; path = "../../../../../../kaleb/Documents/SideProjects/Mixalot/Mixalot/Custom Objects/ItemCell.swift"; sourceTree = "<group>"; };
 		34DE8247204B38F800870884 /* Mixalot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mixalot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DE824A204B38F800870884 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34DE824C204B38F800870884 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,7 +72,6 @@
 		34DE8269204B38F800870884 /* MixalotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MixalotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DE826D204B38F800870884 /* MixalotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixalotUITests.swift; sourceTree = "<group>"; };
 		34DE826F204B38F800870884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		34F40601204B584C003189A9 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchVC.swift; path = ../../../../../../kaleb/Documents/SideProjects/Mixalot/Mixalot/ViewControllers/SearchVC.swift; sourceTree = "<group>"; };
 		7A4F107E204B3E34002456A2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7A72D29B204B3FEF0049A4EF /* ItemViewer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ItemViewer.storyboard; sourceTree = "<group>"; };
 		7A72D29C204B3FEF0049A4EF /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
@@ -84,6 +85,11 @@
 		7A72D2AE204B44A00049A4EF /* FBDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBDatabase.swift; sourceTree = "<group>"; };
 		7A72D2B0204B51470049A4EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7A72D2B2204B61FC0049A4EF /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
+		7AD06024204B641900B34CF9 /* SearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchVC.swift; path = Mixalot/ViewControllers/SearchVC.swift; sourceTree = SOURCE_ROOT; };
+		7AD06026204B642B00B34CF9 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemCell.swift; path = "Mixalot/Custom Objects/ItemCell.swift"; sourceTree = SOURCE_ROOT; };
+		7AD06028204B64AB00B34CF9 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		7AD0602A204B65CE00B34CF9 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		7AD0602C204B65F200B34CF9 /* CreateAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateAccount.storyboard; sourceTree = "<group>"; };
 		856C20FDF0145BC40B8E68CE /* Pods_Mixalot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mixalot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB5EA79758DEBF9A7880C3D7 /* Pods-MixalotUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MixalotUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MixalotUITests/Pods-MixalotUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C220BDE31A61F8EC7EB44846 /* Pods-Mixalot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mixalot.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mixalot/Pods-Mixalot.release.xcconfig"; sourceTree = "<group>"; };
@@ -183,7 +189,9 @@
 		34F40600204B5839003189A9 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				34F40601204B584C003189A9 /* SearchVC.swift */,
+				7AD06024204B641900B34CF9 /* SearchVC.swift */,
+				7AD06028204B64AB00B34CF9 /* SignInVC.swift */,
+				7AD0602A204B65CE00B34CF9 /* CreateAccountVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -191,7 +199,7 @@
 		7A4F107D204B3DD0002456A2 /* Custom Objects */ = {
 			isa = PBXGroup;
 			children = (
-				34AF022E204B526D00A6B9CD /* ItemCell.swift */,
+				7AD06026204B642B00B34CF9 /* ItemCell.swift */,
 				7A4F107E204B3E34002456A2 /* User.swift */,
 				7A72D2A9204B40750049A4EF /* Drink.swift */,
 			);
@@ -209,6 +217,7 @@
 				7A72D2A0204B3FEF0049A4EF /* DrinkList.storyboard */,
 				7A72D2A1204B3FEF0049A4EF /* Settings.storyboard */,
 				7A72D2B2204B61FC0049A4EF /* SignIn.storyboard */,
+				7AD0602C204B65F200B34CF9 /* CreateAccount.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -369,6 +378,7 @@
 				7A72D2A7204B3FEF0049A4EF /* DrinkList.storyboard in Resources */,
 				7A72D2A6204B3FEF0049A4EF /* ItemViewer~.storyboard in Resources */,
 				34DE8250204B38F800870884 /* Main.storyboard in Resources */,
+				7AD0602D204B65F200B34CF9 /* CreateAccount.storyboard in Resources */,
 				7A72D2A5204B3FEF0049A4EF /* Bar.storyboard in Resources */,
 				7A72D2B1204B51470049A4EF /* GoogleService-Info.plist in Resources */,
 				7A72D2A3204B3FEF0049A4EF /* Search.storyboard in Resources */,
@@ -567,12 +577,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34AF022F204B526D00A6B9CD /* ItemCell.swift in Sources */,
 				34DE824D204B38F800870884 /* ViewController.swift in Sources */,
 				7A72D2AA204B40750049A4EF /* Drink.swift in Sources */,
-				34F40602204B584C003189A9 /* SearchVC.swift in Sources */,
+				7AD0602B204B65CE00B34CF9 /* CreateAccountVC.swift in Sources */,
 				34DE824B204B38F800870884 /* AppDelegate.swift in Sources */,
+				7AD06027204B642B00B34CF9 /* ItemCell.swift in Sources */,
+				7AD06029204B64AB00B34CF9 /* SignInVC.swift in Sources */,
 				7A72D2AD204B44900049A4EF /* DrinkDatabase.swift in Sources */,
+				7AD06025204B641900B34CF9 /* SearchVC.swift in Sources */,
 				7A4F107F204B3E34002456A2 /* User.swift in Sources */,
 				7A72D2AF204B44A00049A4EF /* FBDatabase.swift in Sources */,
 				34DE8253204B38F800870884 /* Mixalot.xcdatamodeld in Sources */,
@@ -743,7 +755,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VPT5835T5T;
+				DEVELOPMENT_TEAM = CZ7R6F7L6H;
 				INFOPLIST_FILE = Mixalot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Kaleb-Cooper-Team-Red.Mixalot";
@@ -759,7 +771,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VPT5835T5T;
+				DEVELOPMENT_TEAM = CZ7R6F7L6H;
 				INFOPLIST_FILE = Mixalot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Kaleb-Cooper-Team-Red.Mixalot";
