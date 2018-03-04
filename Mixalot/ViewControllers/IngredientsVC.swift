@@ -14,6 +14,7 @@ class IngredientsVC: UIViewController {
     var gradientLayer: CAGradientLayer!
     var ingredient: String!
     var image: UIImage!
+    var user: User!
 
     @IBOutlet weak var imageOutlet: UIImageView!
     @IBOutlet weak var titleOutlet: UILabel!
@@ -31,15 +32,14 @@ class IngredientsVC: UIViewController {
     
     
     @IBAction func addToBarPressed(_ sender: Any) {
-        let ref = Database.database().reference()
-        let id = FBDatabase.getSignedInID()
-        FBDatabase.getUser(with_id: id!, ref: ref, with_completion: {(user) in
-            if let activeUser = user {
-                activeUser.ingredients.append(self.ingredient)
-                print("")
+        self.user.ingredients.append(ingredient)
+        FBDatabase.addUpdateUser(user: self.user, with_completion: {(error) in
+            if let actualError = error {
+                print(actualError)
             }
             else {
-                print("Did not get user in Ingredients VC")
+                print("Wrote user to DB")
+                self.dismiss(animated: true, completion: nil)
             }
         })
     }
@@ -56,6 +56,17 @@ class IngredientsVC: UIViewController {
     private func setup() {
         titleOutlet.text = ingredient
         imageOutlet.image = image
+        let ref = Database.database().reference()
+        let id = FBDatabase.getSignedInID()
+        FBDatabase.getUser(with_id: id!, ref: ref, with_completion: {(user) in
+            if let actualUser = user {
+                self.user = actualUser
+                ref.removeAllObservers()
+            }
+            else {
+                print("Did not get user in ingredient VC")
+            }
+        })
     }
 
     func createGradientLayer() {

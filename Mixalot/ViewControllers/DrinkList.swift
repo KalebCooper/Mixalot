@@ -13,6 +13,7 @@ class DrinkListCV: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     // MARK: - Properties
     private var user: User!
+    private var ingredientThreshold: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
