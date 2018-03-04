@@ -125,11 +125,9 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
             tableView.reloadData()
         }
         else if let drink = DrinkDatabase.getDrink(with_name: text) {
-            DispatchQueue.main.async {
-                self.ingredientsDrinks.removeAll()
-                self.ingredientsDrinks.append(drink)
-                self.tableView.reloadData()
-            }
+            self.ingredientsDrinks.removeAll()
+            self.ingredientsDrinks.append(drink)
+            self.tableView.reloadData()
         }
         
     }

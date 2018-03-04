@@ -29,7 +29,7 @@ class CocktailsVC: UITableViewController {
     
     var drink: Drink!
     var image: UIImage!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,7 +41,7 @@ class CocktailsVC: UITableViewController {
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
@@ -62,7 +62,7 @@ class CocktailsVC: UITableViewController {
         
         
     }
-
+    
     func createGradientLayer() {
         gradientLayer = CAGradientLayer()
         
@@ -75,7 +75,7 @@ class CocktailsVC: UITableViewController {
         
         self.tableView.layer.insertSublayer(gradientLayer, at: 0)
     }
-
+    
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -89,7 +89,7 @@ class CocktailsVC: UITableViewController {
         
         return 7
     }
-
+    
     
 //    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 ////        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath)
@@ -106,13 +106,14 @@ class CocktailsVC: UITableViewController {
 
 
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
+

@@ -1,47 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14101" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5cm-LA-EOg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N3b-cn-Qfm">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14086"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--SettingsVC-->
-        <scene sceneID="0hf-vk-PNE">
+        <scene sceneID="EXx-on-LwB">
             <objects>
-                <viewController id="5cm-LA-EOg" customClass="SettingsVC" customModule="Mixalot" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="eGO-qD-366">
+                <tableViewController id="N3b-cn-Qfm" customClass="SettingsVC" customModule="Mixalot" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oBu-JE-VS8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xAc-YL-iQ7">
-                                <rect key="frame" x="67" y="342" width="240" height="128"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="xAc-YL-iQ7" firstAttribute="centerY" secondItem="eGO-qD-366" secondAttribute="centerY" id="39P-Xd-qvR"/>
-                            <constraint firstItem="xAc-YL-iQ7" firstAttribute="top" secondItem="0Gq-Ck-aVF" secondAttribute="top" constant="298" id="7Yp-9m-cU5"/>
-                            <constraint firstItem="xAc-YL-iQ7" firstAttribute="leading" secondItem="0Gq-Ck-aVF" secondAttribute="leading" constant="67" id="KU6-3o-nfF"/>
-                            <constraint firstItem="xAc-YL-iQ7" firstAttribute="centerX" secondItem="eGO-qD-366" secondAttribute="centerX" id="oTq-hw-MgI"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="0Gq-Ck-aVF"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" image="SettingsIcon" selectedImage="SettingsIcon" id="uww-KU-zdo"/>
-                    <connections>
-                        <outlet property="imageOutlet" destination="xAc-YL-iQ7" id="Iqk-o7-dHH"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="n9f-2j-5ok" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <sections>
+                            <tableViewSection id="H7m-fT-lXe">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCell" textLabel="kH6-Kf-9WU" style="IBUITableViewCellStyleDefault" id="Lk2-Sd-ieb">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lk2-Sd-ieb" id="9HK-Jy-FuC">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Logout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kH6-Kf-9WU">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="43.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="N3b-cn-Qfm" id="YzN-ZQ-mHH"/>
+                            <outlet property="delegate" destination="N3b-cn-Qfm" id="ahS-nz-Y6D"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mqu-bR-UUX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1954" y="-467"/>
+            <point key="canvasLocation" x="1921" y="-505"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="SettingsIcon" width="33" height="33"/>
-    </resources>
 </document>

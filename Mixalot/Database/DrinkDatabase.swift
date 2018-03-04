@@ -147,6 +147,9 @@ class DrinkDatabase {
             if let jsonStringData = jsonString.data(using: .utf8, allowLossyConversion: false) {
                 let json = try JSON(data: jsonStringData)
                 let jsonObject = json[key]
+                if jsonObject.count == 0 {
+                    return nil
+                }
                 return jsonObject
             }
         }
