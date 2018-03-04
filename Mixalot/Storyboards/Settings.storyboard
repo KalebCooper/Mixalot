@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Settings-->
+        <!--View Controller-->
         <scene sceneID="0hf-vk-PNE">
             <objects>
                 <viewController id="5cm-LA-EOg" sceneMemberID="viewController">
@@ -20,11 +20,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="0Gq-Ck-aVF"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="uww-KU-zdo"/>
+                    <tabBarItem key="tabBarItem" title="" image="SettingsIcon" selectedImage="SettingsIcon" id="uww-KU-zdo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n9f-2j-5ok" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1954" y="-467"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="SettingsIcon" width="50" height="50"/>
+    </resources>
 </document>

@@ -10,19 +10,30 @@ import UIKit
 import DOFavoriteButton
 import Firebase
 
-class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate{
     
+    @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboard()
+        
+        setupSearchBar()
+        
+        
 
+        
         
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func setupSearchBar() {
+        searchBar.tintColor = UIColor.white
+        searchBar.placeholder = "Search"
+        searchBar.setTextColor(color: .white)
+        searchBar.setPlaceholderTextColor(color: .white)
+        searchBar.setSearchImageColor(color: .white)
+        searchBar.setTextFieldClearButtonColor(color: .white)
     }
     
     

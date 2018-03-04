@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Favorites-->
+        <!--View Controller-->
         <scene sceneID="8mO-i5-o6n">
             <objects>
                 <viewController id="QAo-hm-ZGC" sceneMemberID="viewController">
@@ -35,11 +35,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="TTd-ZT-79s"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favorites" id="lqf-oX-ajy"/>
+                    <tabBarItem key="tabBarItem" title="" image="FavoritesIcon" id="lqf-oX-ajy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FA0-I8-NFD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-700" y="-466.41679160419795"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="FavoritesIcon" width="50" height="50"/>
+    </resources>
 </document>
