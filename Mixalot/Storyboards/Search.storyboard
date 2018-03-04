@@ -178,6 +178,8 @@
                         <outlet property="searchBar" destination="H7o-o8-plq" id="yab-E5-bfF"/>
                         <outlet property="searchDisplayController" destination="2cg-BR-f3d" id="AVO-ZI-qem"/>
                         <outlet property="tableView" destination="665-IZ-mUR" id="TSH-ur-yRq"/>
+                        <segue destination="naW-oc-iYu" kind="show" identifier="IngredientSegue" id="jgc-EQ-EjP"/>
+                        <segue destination="qvz-ae-vVW" kind="show" identifier="CocktailSegue" id="8U2-wS-msW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0qS-Fh-DeO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -191,6 +193,22 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="-1493.5999999999999" y="-466.99507389162562"/>
+        </scene>
+        <!--Cocktail-->
+        <scene sceneID="255-Yq-Ygi">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Cocktail" id="qvz-ae-vVW" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CJC-YP-9p5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-751" y="-528"/>
+        </scene>
+        <!--Ingredient-->
+        <scene sceneID="DYy-Mq-VKu">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Ingredient" id="naW-oc-iYu" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z8g-VJ-fta" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-650" y="-367"/>
         </scene>
     </scenes>
     <resources>

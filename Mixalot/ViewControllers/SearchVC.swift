@@ -73,6 +73,16 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cellData = ingredientsDrinks[indexPath.row]
+        if let ingredient = cellData as? String {
+            self.performSegue(withIdentifier: "IngredientSegue", sender: nil)
+        }
+        else if let drink = cellData as? Drink {
+            self.performSegue(withIdentifier: "DrinkSegue", sender: nil)
+        }
+    }
+    
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
         cell.layer.transform = CATransform3DMakeScale(0.1,0.1,1)
