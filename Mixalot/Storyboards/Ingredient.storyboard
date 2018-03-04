@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FSA-f0-bDL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14101" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FSA-f0-bDL">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -49,14 +49,21 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTO-9N-Ggm">
-                                <rect key="frame" x="16" y="31" width="34" height="30"/>
-                                <state key="normal" title="Back"/>
+                                <rect key="frame" x="16" y="31" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6oS-9j-s2p"/>
+                                    <constraint firstAttribute="width" constant="50" id="g90-ES-Zho"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="&lt;">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="backPressed:" destination="FSA-f0-bDL" eventType="touchUpInside" id="x6M-cj-Liw"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="oSy-PB-AUf" firstAttribute="centerY" secondItem="T1G-vb-ZSZ" secondAttribute="centerY" constant="-47" id="8x9-mm-twP"/>
                             <constraint firstItem="pBf-Lv-r25" firstAttribute="centerX" secondItem="oSy-PB-AUf" secondAttribute="centerX" id="DPb-Yb-O1b"/>
@@ -69,6 +76,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dps-wJ-dtH"/>
                     </view>
+                    <navigationItem key="navigationItem" id="u7c-1U-fbW"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="imageOutlet" destination="oSy-PB-AUf" id="u9g-yO-4zB"/>
                         <outlet property="titleOutlet" destination="pBf-Lv-r25" id="8LA-Hb-qKH"/>
@@ -76,7 +87,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TIC-sO-VBG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-51" y="28"/>
+            <point key="canvasLocation" x="890.39999999999998" y="27.339901477832512"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4Cr-ys-3iY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Qp6-KK-LEe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7Dm-cQ-HGY">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="FSA-f0-bDL" kind="relationship" relationship="rootViewController" id="hKW-zt-5jj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sis-mb-vMM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-52" y="27.339901477832512"/>
         </scene>
     </scenes>
     <resources>

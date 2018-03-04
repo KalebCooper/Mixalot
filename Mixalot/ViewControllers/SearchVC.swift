@@ -20,6 +20,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.hideKeyboard()
         print("Called")
         setupSearchBar()
         setup()
@@ -64,6 +65,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
         let ingredientOrDrink = ingredientsDrinks[indexPath.row]
         if let ingredient = ingredientOrDrink as? String {
             cell.titleOutlet.text = ingredient
+            cell.imageOutlet.image = ImageSelector.pickIngredientImage(title: ingredient)
         }
         else if let drink = ingredientOrDrink as? Drink {
             cell.titleOutlet.text = drink.name
@@ -87,15 +89,17 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
             let infoArray = [cell.imageOutlet.image, drink] as [Any]
             self.performSegue(withIdentifier: "DrinkSegue", sender: infoArray)
         }
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
         cell.layer.transform = CATransform3DMakeScale(0.1,0.1,1)
-        UIView.animate(withDuration: 0.4, animations: {
+        UIView.animate(withDuration: 0.1, animations: {
             cell.layer.transform = CATransform3DMakeScale(1.05,1.05,1)
         },completion: { finished in
-            UIView.animate(withDuration: 0.4, animations: {
+            UIView.animate(withDuration: 0.15, animations: {
                 cell.layer.transform = CATransform3DMakeScale(1,1,1)
             })
         })
