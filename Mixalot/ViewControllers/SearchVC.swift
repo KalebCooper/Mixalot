@@ -44,13 +44,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
         self.hideKeyboard()
         print("Called")
         setupSearchBar()
-        
-//        scheduledTimerWithTimeInterval()
-//        timer.fire()
-        
-
-        
-        
+        setup()
         // Do any additional setup after loading the view.
     }
     
