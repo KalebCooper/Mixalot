@@ -31,8 +31,6 @@
 		7A72D2B1204B51470049A4EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A72D2B0204B51470049A4EF /* GoogleService-Info.plist */; };
 		7AD06025204B641900B34CF9 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD06024204B641900B34CF9 /* SearchVC.swift */; };
 		7AD06027204B642B00B34CF9 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD06026204B642B00B34CF9 /* ItemCell.swift */; };
-		7AD06029204B64AB00B34CF9 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD06028204B64AB00B34CF9 /* SignInVC.swift */; };
-		7AD0602B204B65CE00B34CF9 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD0602A204B65CE00B34CF9 /* CreateAccountVC.swift */; };
 		7AF4686E204B784D00A3A474 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF4686D204B784D00A3A474 /* Extensions.swift */; };
 		7AF46870204B972100A3A474 /* DrinkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF4686F204B972100A3A474 /* DrinkList.swift */; };
 		C62614B6FE1671B9F63086CD /* Pods_MixalotUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2C869110E6E2BE70DA9EB1 /* Pods_MixalotUITests.framework */; };
@@ -86,8 +84,6 @@
 		7A72D2B0204B51470049A4EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7AD06024204B641900B34CF9 /* SearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchVC.swift; path = Mixalot/ViewControllers/SearchVC.swift; sourceTree = SOURCE_ROOT; };
 		7AD06026204B642B00B34CF9 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemCell.swift; path = "Mixalot/Custom Objects/ItemCell.swift"; sourceTree = SOURCE_ROOT; };
-		7AD06028204B64AB00B34CF9 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
-		7AD0602A204B65CE00B34CF9 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		7AF4686D204B784D00A3A474 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7AF4686F204B972100A3A474 /* DrinkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkList.swift; sourceTree = "<group>"; };
 		856C20FDF0145BC40B8E68CE /* Pods_Mixalot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mixalot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,8 +195,6 @@
 			isa = PBXGroup;
 			children = (
 				7AD06024204B641900B34CF9 /* SearchVC.swift */,
-				7AD06028204B64AB00B34CF9 /* SignInVC.swift */,
-				7AD0602A204B65CE00B34CF9 /* CreateAccountVC.swift */,
 				7AF4686F204B972100A3A474 /* DrinkList.swift */,
 			);
 			path = ViewControllers;
@@ -587,10 +581,8 @@
 			files = (
 				34DE824D204B38F800870884 /* ViewController.swift in Sources */,
 				7A72D2AA204B40750049A4EF /* Drink.swift in Sources */,
-				7AD0602B204B65CE00B34CF9 /* CreateAccountVC.swift in Sources */,
 				34DE824B204B38F800870884 /* AppDelegate.swift in Sources */,
 				7AD06027204B642B00B34CF9 /* ItemCell.swift in Sources */,
-				7AD06029204B64AB00B34CF9 /* SignInVC.swift in Sources */,
 				7A72D2AD204B44900049A4EF /* DrinkDatabase.swift in Sources */,
 				7AF4686E204B784D00A3A474 /* Extensions.swift in Sources */,
 				7AD06025204B641900B34CF9 /* SearchVC.swift in Sources */,
