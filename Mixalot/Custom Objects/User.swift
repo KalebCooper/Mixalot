@@ -15,11 +15,13 @@ class User {
     var name: String!
     var favorites: [String]!
     var createdDrinks: [String]!
+    var ingredients: [String]!
     
-    public init(id: String, name: String, favorites: [String] = [], createdDrinks: [String] = []) {
+    public init(id: String, name: String, favorites: [String] = [], createdDrinks: [String] = [], ingredients: [String] = []) {
         self.id = id
         self.name = name
         self.favorites = favorites
         self.createdDrinks = createdDrinks
+        self.ingredients = ingredients
     }
 }

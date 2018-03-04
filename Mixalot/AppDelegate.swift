@@ -15,7 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-        UIApplication.shared.statusBarStyle = .lightContent
+        /*if let signedInInfo = FBDatabase.getSignedInEmailPassword() {
+            let email = signedInInfo.email
+            let password = signedInInfo.password
+            FBDatabase.signIn(email: email, password: password, with_completion: {(error) in
+                if let actualError = error {
+                    
+                }
+                else {
+                    
+                }
+            })
+        }*/
         // Override point for customization after application launch.
         return true
     }
