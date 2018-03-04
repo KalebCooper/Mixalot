@@ -218,11 +218,62 @@ class ImageSelector {
         else if title.lowercased().contains("vodka") {
             return UIImage(named: "vodka2")!
         }
-        else if title.lowercased().contains("whiskey") {
+        else if title.lowercased().contains("whiskey") || title.lowercased().contains("whisky") {
             return UIImage(named: "whiskey2")!
+        }
+        else if title.lowercased().contains("southern"){
+            return UIImage(named: "whiskey1")!
+        }
+        else if title.lowercased().contains("dubonnet"){
+            return UIImage(named: "redCocktail16")!
+        }
+        else if title.lowercased().contains("carbonated"){
+            return UIImage(named: "soda")!
+        }
+        else if title.lowercased().contains("triple"){
+            return UIImage(named: "vodka 2")!
         }
         else if title.lowercased().contains("amaretto") {
             return UIImage(named: "amaretto")!
+        }
+        else if title.lowercased().contains("vermouth"){
+            return UIImage(named: "redCocktail16")!
+        }
+        else if title.lowercased().contains("jack") {
+            return UIImage(named: "whiskey2")!
+        }
+        else if title.lowercased().contains("crown") {
+            return UIImage(named: "whiskey1")!
+        }
+        else if title.lowercased().contains("corona") {
+            return UIImage(named: "beer3")!
+        }
+        else if title.lowercased().contains("kahlua"){
+            return UIImage(named: "rum")!
+        }
+        else if title.lowercased().contains("cantaloupe") {
+            return UIImage(named: "syrup")!
+        }
+        else if title.lowercased().contains("pineapple") {
+            return UIImage(named: "pineapple")!
+        }
+        else if title.lowercased().contains("berr") {
+            return UIImage(named: "berry")!
+        }
+        else if title.lowercased().contains("grapes") {
+            return UIImage(named: "grapes")!
+        }
+        else if title.lowercased().contains("kiwi") {
+            return UIImage(named: "kiwi")!
+        }
+        else if title.lowercased().contains("espresso") {
+            return UIImage(named: "espresso")!
+        }
+        else if title.lowercased().contains("sprite") {
+            return UIImage(named: "sprite")!
+        }
+        else if title.lowercased().contains("7") {
+            return UIImage(named: "7up")!
         }
         else if title.lowercased().contains("apple") {
             return UIImage(named: "apple")!
@@ -250,6 +301,9 @@ class ImageSelector {
         }
         else if title.lowercased().contains("coffee") {
             return UIImage(named: "coffee")!
+        }
+        else if title.lowercased().contains("syrup") {
+            return UIImage(named: "syrup")!
         }
         else if title.lowercased().contains("cola") {
             return UIImage(named: "cola")!
@@ -308,9 +362,6 @@ class ImageSelector {
         else if title.lowercased().contains("pear") {
             return UIImage(named: "pear")!
         }
-        else if title.lowercased().contains("pineapple") {
-            return UIImage(named: "pineapple")!
-        }
         else if title.lowercased().contains("punch") {
             return UIImage(named: "punch")!
         }
@@ -334,9 +385,6 @@ class ImageSelector {
         }
         else if title.lowercased().contains("sugar") {
             return UIImage(named: "sugar")!
-        }
-        else if title.lowercased().contains("syrup") {
-            return UIImage(named: "syrup")!
         }
         else if title.lowercased().contains("tea") {
             return UIImage(named: "tea")!

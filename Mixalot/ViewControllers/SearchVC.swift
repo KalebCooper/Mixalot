@@ -20,7 +20,7 @@ class SearchVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideKeyboard()
+        //self.hideKeyboard()
         print("Called")
         setupSearchBar()
         setup()
