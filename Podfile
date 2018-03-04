@@ -15,9 +15,7 @@ target 'Mixalot' do
   pod 'SkyFloatingLabelTextField'
   pod 'IHKeyboardAvoiding'
   pod 'LGButton'
-  pod 'Skeleton'
   pod 'SwiftyJSON'
-  pod 'DOFavoriteButton'
   pod "SwipeableTabBarController"
 
   target 'MixalotTests' do
