@@ -70,7 +70,7 @@ class CreateAccountVC: UITableViewController, UIImagePickerControllerDelegate, U
                         else {
                             // No error
                             print("Wrote user to database in SignInVC")
-                            FBDatabase.setAutomaticSignIn(email: email, password: password)
+                            FBDatabase.setAutomaticSignIn(email: email, password: password, id: id!)
                         }
                     })
                 }
