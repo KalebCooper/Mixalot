@@ -22,6 +22,9 @@ class DrinkDatabase {
     
     // MARK: - Drink query constants
     private static var DRINK_QUERY = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i="
+    
+    private static var DRINK_NAME_QUERY = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="
+    
     private static var DRINK_NAME = "strDrink"
     private static var DRINK_GLASS = "strGlass"
     private static var DRINK_INSTRUCTION = "strInstructions"
@@ -85,6 +88,33 @@ class DrinkDatabase {
         if let url = URL(string: (DrinkDatabase.DRINK_QUERY + id)) {
             if let jsonObject = getEncodedJSON(url: url, key: DRINKS_KEY) {
                 //print(jsonObject)
+                let name = jsonObject[0][DRINK_NAME].string!
+                let glass = jsonObject[0][DRINK_GLASS].string!
+                let instruction = jsonObject[0][DRINK_INSTRUCTION].string!
+                let dateModified = jsonObject[0][DRINK_DATE_MODIFIED].string!
+                var ingredients: [String] = []
+                for i in stride(from: 1, to: 15, by: 1) {
+                    if let singleIngredient = jsonObject[0][DRINK_INGREDIENT + "\(i)"].string {
+                        ingredients.append(singleIngredient)
+                    }
+                }
+                let drink = Drink(id: id, name: name, glass: glass, instruction: instruction, pictureID: "", ingredients: ingredients, dateModified: dateModified)
+                return drink
+            }
+            else {
+                return nil
+            }
+        }
+        else {
+            return nil
+        }
+    }
+    
+    class func getDrink(with_name name: String) -> Drink? {
+        if let url = URL(string: (DrinkDatabase.DRINK_NAME_QUERY + name)) {
+            if let jsonObject = getEncodedJSON(url: url, key: DRINKS_KEY) {
+                print(jsonObject)
+                let id = jsonObject[0][DRINKS_ID].string!
                 let name = jsonObject[0][DRINK_NAME].string!
                 let glass = jsonObject[0][DRINK_GLASS].string!
                 let instruction = jsonObject[0][DRINK_INSTRUCTION].string!

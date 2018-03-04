@@ -17,6 +17,7 @@ class User {
     var createdDrinks: [String]!
     var ingredients: [String]!
     
+    
     public init(id: String, name: String, favorites: [String] = [], createdDrinks: [String] = [], ingredients: [String] = []) {
         self.id = id
         self.name = name
